@@ -51,6 +51,7 @@ For rules names, check inside src folder, each folder is a rule.
 - [ ] use [eslint-plugin-self](https://github.com/not-an-aardvark/eslint-plugin-self) ?
 - [ ] get inspiration from [eslint-plugin-antfu](https://github.com/antfu/eslint-config/tree/main/packages/eslint-plugin-antfu)
 - [ ] this plugin should expose all the plugins & configs I want to use everywhere : eslint/recommended, typescript/all, unicorn/all, etc
+- [ ] check npm pack for publishing
 
 ## Thanks
 
