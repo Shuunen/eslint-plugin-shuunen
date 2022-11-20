@@ -16,7 +16,7 @@
     "eslint-plugin-unicorn": "45.x",
     "repo-check": "1.29.x",
     "ts-node": "10.x.x",
-    "typescript": "4.8.x",
+    "typescript": "4.9.x",
     "watchlist": "0"
   },
   "files": [
