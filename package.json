@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "author": "Romain Racamier-Lafon <romain.racamier@gmail.com>",
+  "bugs": "https://github.com/Shuunen/eslint-plugin-shuunen/issues",
+  "dependencies": {
+    "@typescript-eslint/utils": "5.x.x"
+  },
+  "description": "My personal ESLint configs & rules",
+  "devDependencies": {
+    "@types/node": "18.x.x",
+    "@typescript-eslint/eslint-plugin": "5.x.x",
+    "@typescript-eslint/parser": "5.x.x",
+    "dependency-cruiser": "latest",
+    "esbuild": "0.15.x",
+    "eslint": "8.x.x",
+    "eslint-plugin-unicorn": "44.x.x",
+    "repo-check": "1.29.x",
+    "ts-node": "10.x.x",
+    "typescript": "4.8.x",
+    "watchlist": "0"
+  },
+  "files": [
+    "src"
+  ],
+  "homepage": "https://github.com/Shuunen/eslint-plugin-shuunen",
+  "keywords": [
+    "webapp",
+    "stuff",
+    "finder"
+  ],
+  "license": "AGPL-3.0",
+  "main": "dist/index.js",
+  "name": "eslint-plugin-shuunen",
+  "peerDependencies": {
+    "eslint": "^8",
+    "typescript": "*"
+  },
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shuunen/eslint-plugin-shuunen.git"
+  },
+  "scripts": {
+    "build": "echo no build task is needed",
+    "check": "repo-check",
+    "ci": "npm run build && npm run lint && npm run check && npm run test",
+    "lint": "tsc --noEmit && eslint --fix --ignore-path .gitignore --ext .ts . && depcruise src --config",
+    "postversion": "git push && git push --tags",
+    "preversion": "npm run ci",
+    "start": "npm run dev",
+    "test": "ts-node src/tests.ts",
+    "test:watch": "watchlist src -eager -- npm test"
+  },
+  "typings": "src/index.ts",
+  "version": "0.0.0"
+}
