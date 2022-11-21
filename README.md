@@ -1,7 +1,8 @@
 # eslint-plugin-shuunen
 
-My personal eslint configs [![Project license](https://img.shields.io/github/license/Shuunen/eslint-plugin-shuunen.svg?color=informational)](https://github.com/Shuunen/eslint-plugin-shuunen/blob/master/LICENSE)
-&amp; rules &lt;3
+[![Project license](https://img.shields.io/github/license/Shuunen/eslint-plugin-shuunen.svg?color=informational)](https://github.com/Shuunen/eslint-plugin-shuunen/blob/master/LICENSE)
+
+My personal eslint configs&amp; rules &lt;3
 
 ## Installation
 
