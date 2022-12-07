@@ -11,7 +11,7 @@
     "@typescript-eslint/eslint-plugin": "5.x.x",
     "@typescript-eslint/parser": "5.x.x",
     "dependency-cruiser": "latest",
-    "esbuild": "0.15.x",
+    "esbuild": "0.16.x",
     "eslint": "8.x.x",
     "eslint-plugin-unicorn": "45.x",
     "repo-check": "1.29.x",
