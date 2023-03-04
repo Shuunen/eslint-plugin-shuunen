@@ -8,7 +8,7 @@ specifiers:
   dependency-cruiser: latest
   esbuild: 0.17.x
   eslint: 8.x.x
-  eslint-plugin-unicorn: 45.x
+  eslint-plugin-unicorn: 46.x
   repo-check: 1.30.x
   ts-node: 10.x.x
   typescript: 4.8.x
@@ -21,10 +21,10 @@ devDependencies:
   '@types/node': 18.11.9
   '@typescript-eslint/eslint-plugin': 5.43.0_ol5heeoi7wmwb4tenztnb7jlze
   '@typescript-eslint/parser': 5.43.0_zksrc6ykdxhogxjbhb5axiabwi
-  dependency-cruiser: 12.9.0
+  dependency-cruiser: 12.10.0
   esbuild: 0.17.0
   eslint: 8.28.0
-  eslint-plugin-unicorn: 45.0.0_eslint@8.28.0
+  eslint-plugin-unicorn: 46.0.0_eslint@8.28.0
   repo-check: 1.30.1
   ts-node: 10.9.1_cbe7ovvae6zqfnmtgctpgpys54
   typescript: 4.8.4
@@ -257,6 +257,16 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@eslint-community/eslint-utils/4.2.0_eslint@8.28.0:
+    resolution: {integrity: sha512-gB8T4H4DEfX2IV9zGDJPOBgP1e/DbfCPDTtEqUMckpvzS1OYtva8JdFYBqMwYk7xAQ429WGF/UPqn8uQ//h2vQ==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      eslint: ^6.0.0 || ^7.0.0 || >=8.0.0
+    dependencies:
+      eslint: 8.28.0
+      eslint-visitor-keys: 3.3.0
+    dev: true
 
   /@eslint/eslintrc/1.3.3:
     resolution: {integrity: sha512-uj3pT6Mg+3t39fvLrj8iuCIJ38zKO9FpGtJ4BBJebJhEwjoT+KLVNCcHT5QC9NGRIEi7fZ0ZR8YRb884auB4Lg==}
@@ -667,8 +677,8 @@ packages:
   /deep-is/0.1.4:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
 
-  /dependency-cruiser/12.9.0:
-    resolution: {integrity: sha512-ssh6jXicSqGMIyVASudalhU7IXd/v5P7/BxW+Kz7EmETfaNrZ1ajaysrXKYzqKA/rLqDgAnvd6VQ17PSP+TvzQ==}
+  /dependency-cruiser/12.10.0:
+    resolution: {integrity: sha512-eRaqlAdE7/QAD1up/ju1N8quo+W3Ow4vIzzeqn1/WflxYIakN/dzJXzHZYSyWC+1Fw9T3F5YbXdLhXuRGb9R/A==}
     engines: {node: ^14||^16||>=18}
     hasBin: true
     dependencies:
@@ -698,7 +708,7 @@ packages:
       semver-try-require: 6.0.0
       teamcity-service-messages: 0.1.14
       tsconfig-paths-webpack-plugin: 4.0.0
-      watskeburt: 0.9.1
+      watskeburt: 0.10.0
       wrap-ansi: 7.0.0
     dev: true
 
@@ -786,17 +796,17 @@ packages:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
 
-  /eslint-plugin-unicorn/45.0.0_eslint@8.28.0:
-    resolution: {integrity: sha512-iP8cMRxXKHonKioOhnCoCcqVhoqhAp6rB+nsoLjXFDxTHz3btWMAp8xwzjHA0B1K6YV/U/Yvqn1bUXZt8sJPuQ==}
+  /eslint-plugin-unicorn/46.0.0_eslint@8.28.0:
+    resolution: {integrity: sha512-j07WkC+PFZwk8J33LYp6JMoHa1lXc1u6R45pbSAipjpfpb7KIGr17VE2D685zCxR5VL4cjrl65kTJflziQWMDA==}
     engines: {node: '>=14.18'}
     peerDependencies:
       eslint: '>=8.28.0'
     dependencies:
       '@babel/helper-validator-identifier': 7.19.1
+      '@eslint-community/eslint-utils': 4.2.0_eslint@8.28.0
       ci-info: 3.6.1
       clean-regexp: 1.0.0
       eslint: 8.28.0
-      eslint-utils: 3.0.0_eslint@8.28.0
       esquery: 1.4.0
       indent-string: 4.0.0
       is-builtin-module: 3.2.0
@@ -1830,8 +1840,8 @@ packages:
       mri: 1.2.0
     dev: true
 
-  /watskeburt/0.9.1:
-    resolution: {integrity: sha512-2PnMWbtOLS1/9ibx5zy02Sok15r7ZutglXl56caBEkV8ejeUdAnZcPyku3enF579MsAvE2MjtBno7CJErJjxPw==}
+  /watskeburt/0.10.0:
+    resolution: {integrity: sha512-qgWuPYRk3Qv4neXbMW1zD4suYAbcox2MyTBsRWG4HhNHLZcJlsRbfe5fwJi6PZyZi6ZlprLh5kg/AC9nUAtNRg==}
     engines: {node: ^14||^16||>=18}
     hasBin: true
     dependencies:
