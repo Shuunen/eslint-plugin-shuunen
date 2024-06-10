@@ -42,12 +42,11 @@
   },
   "scripts": {
     "build": "echo no build task is needed",
-    "check": "repo-check",
-    "ci": "npm run build && npm run lint && npm run check && npm run test",
+    "check": "pnpm install && echo install success && pnpm build && repo-check && pnpm lint && pnpm test && echo check success",
     "lint": "tsc --noEmit && eslint --fix --ignore-path .gitignore --ext .ts . && depcruise src --config",
     "postversion": "git push && git push --tags",
-    "preversion": "npm run ci",
-    "start": "npm run dev",
+    "preversion": "pnpm ci",
+    "start": "pnpm dev",
     "test": "ts-node src/tests.ts",
     "test:watch": "watchlist src -eager -- npm test"
   },
