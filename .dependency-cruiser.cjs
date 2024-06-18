@@ -1,3 +1,5 @@
+/* eslint-disable no-useless-escape */
+/* eslint-disable no-undef */
 /** @type {import('dependency-cruiser').IConfiguration} */
 module.exports = {
   forbidden: [
@@ -26,10 +28,10 @@ module.exports = {
       from: {
         orphan: true,
         pathNot: [
-          '(^|/)\\.[^/]+\\.(js|cjs|mjs|ts|json)$', // dot files
-          '\\.d\\.ts$',                            // TypeScript declaration files
-          '(^|/)tsconfig\\.json$',                 // TypeScript config
-          '(^|/)(babel|webpack)\\.config\\.(js|cjs|mjs|ts|json)$' // other configs
+          String.raw`(^|/)\.[^/]+\.(js|cjs|mjs|ts|json)$`, // dot files
+          String.raw`\.d\.ts$`,                            // TypeScript declaration files
+          String.raw`(^|/)tsconfig\.json$`,                 // TypeScript config
+          String.raw`(^|/)(babel|webpack)\.config\.(js|cjs|mjs|ts|json)$` // other configs
         ]
       },
       to: {},
@@ -150,7 +152,7 @@ module.exports = {
       severity: 'error',
       from: {},
       to: {
-        path: '\\.(spec|test)\\.(js|mjs|cjs|ts|ls|coffee|litcoffee|coffee\\.md)$'
+        path: String.raw`\.(spec|test)\.(js|mjs|cjs|ts|ls|coffee|litcoffee|coffee\.md)$`
       }
     },
     {
@@ -164,7 +166,7 @@ module.exports = {
         'from.pathNot re of the not-to-dev-dep rule in the dependency-cruiser configuration',
       from: {
         path: '^(src)',
-        pathNot: '\\.(spec|test)\\.(js|mjs|cjs|ts|ls|coffee|litcoffee|coffee\\.md)$'
+        pathNot: String.raw`\.(spec|test)\.(js|mjs|cjs|ts|ls|coffee|litcoffee|coffee\.md)$`
       },
       to: {
         dependencyTypes: [
@@ -451,5 +453,5 @@ module.exports = {
       },
     }
   }
-};
+}
 // generated: dependency-cruiser@11.18.0 on 2022-11-09T09:53:38.188Z

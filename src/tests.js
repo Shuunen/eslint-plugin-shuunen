@@ -1,9 +1,8 @@
-/* eslint-disable no-console */
 import { listRulesNames, PLUGIN_NAME } from '.'
 
 const title = `${PLUGIN_NAME} lint tests executed in `
 
-const main = async (): Promise<void> => {
+const main = async () => {
   console.log(`${PLUGIN_NAME} lint tests starts...`)
   console.time(title)
   await Promise.all(listRulesNames().map(async (name) => {

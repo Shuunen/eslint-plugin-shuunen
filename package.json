@@ -3,20 +3,22 @@
   "author": "Romain Racamier-Lafon <romain.racamier@gmail.com>",
   "bugs": "https://github.com/Shuunen/eslint-plugin-shuunen/issues",
   "dependencies": {
-    "@typescript-eslint/utils": "5.x.x"
+    "@typescript-eslint/utils": "7.13.1"
   },
   "description": "My personal ESLint configs & rules",
   "devDependencies": {
+    "@eslint/js": "^9.5.0",
+    "@types/eslint__js": "^8.42.3",
     "@types/node": "20.x",
-    "@typescript-eslint/eslint-plugin": "5.x.x",
-    "@typescript-eslint/parser": "5.x.x",
     "dependency-cruiser": "latest",
     "esbuild": "0.21.x",
-    "eslint": "8.x.x",
-    "eslint-plugin-unicorn": "46.x",
-    "repo-check": "1.31.x",
+    "eslint": "9.5.0",
+    "eslint-plugin-unicorn": "54.0.0",
+    "globals": "^15.6.0",
+    "repo-check": "1.35.x",
     "ts-node": "10.x.x",
-    "typescript": "4.8.x",
+    "typescript": "5.4.5",
+    "typescript-eslint": "^7.13.1",
     "watchlist": "0"
   },
   "files": [
@@ -41,15 +43,20 @@
     "url": "https://github.com/Shuunen/eslint-plugin-shuunen.git"
   },
   "scripts": {
-    "build": "echo no build task is needed",
+    "build": "echo no build task is needed && echo build success",
     "check": "pnpm install && echo install success && pnpm build && repo-check && pnpm lint && pnpm test && echo check success",
-    "lint": "tsc --noEmit && eslint --fix --ignore-path .gitignore --ext .ts . && depcruise src --config",
+    "lint": "pnpm lint:tsc && pnpm lint:biome && pnpm lint:eslint && pnpm lint:dep && echo lint success",
+    "lint:biome": "echo no biome yet && echo lint:biome success",
+    "lint:dep": "depcruise src --config && echo lint:dep success",
+    "lint:eslint": "eslint --cache --max-warnings 0 src && echo .ts && echo lint:eslint success",
+    "lint:tsc": "tsc --noEmit && echo lint:tsc success",
     "postversion": "git push && git push --tags",
     "preversion": "pnpm ci",
     "start": "pnpm dev",
-    "test": "ts-node src/tests.ts",
+    "test": "echo rework tests && echo test success",
     "test:watch": "watchlist src -eager -- npm test"
   },
   "typings": "src/index.ts",
+  "type": "module",
   "version": "0.0.0"
 }

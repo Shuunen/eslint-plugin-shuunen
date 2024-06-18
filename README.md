@@ -1,5 +1,6 @@
 # eslint-plugin-shuunen
 
+[![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/Shuunen/eslint-plugin-shuunen?style=flat)](https://codeclimate.com/github/Shuunen/eslint-plugin-shuunen)
 [![Project license](https://img.shields.io/github/license/Shuunen/eslint-plugin-shuunen.svg?color=informational)](https://github.com/Shuunen/eslint-plugin-shuunen/blob/master/LICENSE)
 
 My personal eslint configs&amp; rules &lt;3
@@ -56,6 +57,7 @@ For rules names, check inside src folder, each folder is a rule.
 
 ## Thanks
 
+- [Dependency-cruiser](https://github.com/sverweij/dependency-cruiser) : handy tool to validate and visualize dependencies
 - [Esbuild](https://github.com/evanw/esbuild) : an extremely fast JavaScript bundler and minifier
 - [Eslint](https://eslint.org) : super tool to find & fix problems
 - [Github](https://github.com) : for all their great work year after year, pushing OSS forward
