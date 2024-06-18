@@ -34,7 +34,7 @@
   "main": "dist/index.js",
   "name": "eslint-plugin-shuunen",
   "peerDependencies": {
-    "eslint": "^8",
+    "eslint": "^9.0.0",
     "typescript": "*"
   },
   "private": false,
