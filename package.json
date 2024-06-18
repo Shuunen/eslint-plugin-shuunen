@@ -7,7 +7,7 @@
   },
   "description": "My personal ESLint configs & rules",
   "devDependencies": {
-    "@types/node": "18.x.x",
+    "@types/node": "20.x",
     "@typescript-eslint/eslint-plugin": "5.x.x",
     "@typescript-eslint/parser": "5.x.x",
     "dependency-cruiser": "latest",
