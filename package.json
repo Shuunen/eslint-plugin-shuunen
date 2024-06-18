@@ -3,13 +3,13 @@
   "author": "Romain Racamier-Lafon <romain.racamier@gmail.com>",
   "bugs": "https://github.com/Shuunen/eslint-plugin-shuunen/issues",
   "dependencies": {
-    "@typescript-eslint/utils": "5.x.x"
+    "@typescript-eslint/utils": "7.x"
   },
   "description": "My personal ESLint configs & rules",
   "devDependencies": {
     "@types/node": "20.x",
-    "@typescript-eslint/eslint-plugin": "5.x.x",
-    "@typescript-eslint/parser": "5.x.x",
+    "@typescript-eslint/eslint-plugin": "7.x",
+    "@typescript-eslint/parser": "7.x",
     "dependency-cruiser": "latest",
     "esbuild": "0.21.x",
     "eslint": "8.x.x",
