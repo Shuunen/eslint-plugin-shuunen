@@ -3,22 +3,22 @@
   "author": "Romain Racamier-Lafon <romain.racamier@gmail.com>",
   "bugs": "https://github.com/Shuunen/eslint-plugin-shuunen/issues",
   "dependencies": {
-    "@typescript-eslint/utils": "7.13.1"
+    "@typescript-eslint/utils": "7.13"
   },
   "description": "My personal ESLint configs & rules",
   "devDependencies": {
-    "@eslint/js": "^9.5.0",
-    "@types/eslint__js": "^8.42.3",
-    "@types/node": "20.x",
+    "@eslint/js": "9.5",
+    "@types/eslint__js": "8.42",
+    "@types/node": "20",
     "dependency-cruiser": "latest",
-    "esbuild": "0.21.x",
-    "eslint": "9.5.0",
-    "eslint-plugin-unicorn": "54.0.0",
-    "globals": "^15.6.0",
-    "repo-check": "1.35.x",
-    "ts-node": "10.x.x",
-    "typescript": "5.4.5",
-    "typescript-eslint": "^7.13.1",
+    "esbuild": "0.21",
+    "eslint": "9.5",
+    "eslint-plugin-unicorn": "54",
+    "globals": "15",
+    "repo-check": "1.35",
+    "ts-node": "10",
+    "typescript": "5.4",
+    "typescript-eslint": "7.13",
     "watchlist": "0"
   },
   "files": [
@@ -26,15 +26,15 @@
   ],
   "homepage": "https://github.com/Shuunen/eslint-plugin-shuunen",
   "keywords": [
-    "webapp",
-    "stuff",
-    "finder"
+    "eslint",
+    "plugin",
+    "shuunen"
   ],
   "license": "AGPL-3.0",
   "main": "dist/index.js",
   "name": "eslint-plugin-shuunen",
   "peerDependencies": {
-    "eslint": "^9.0.0",
+    "eslint": "^9.5",
     "typescript": "*"
   },
   "private": false,
@@ -48,7 +48,7 @@
     "lint": "pnpm lint:tsc && pnpm lint:biome && pnpm lint:eslint && pnpm lint:dep && echo lint success",
     "lint:biome": "echo no biome yet && echo lint:biome success",
     "lint:dep": "depcruise src --config && echo lint:dep success",
-    "lint:eslint": "eslint --cache --max-warnings 0 src && echo .ts && echo lint:eslint success",
+    "lint:eslint": "eslint --cache --max-warnings 0 src && echo lint:eslint success",
     "lint:tsc": "tsc --noEmit && echo lint:tsc success",
     "postversion": "git push && git push --tags",
     "preversion": "pnpm ci",
@@ -56,7 +56,7 @@
     "test": "echo rework tests && echo test success",
     "test:watch": "watchlist src -eager -- npm test"
   },
-  "typings": "src/index.ts",
   "type": "module",
+  "typings": "src/index.ts",
   "version": "0.0.0"
 }

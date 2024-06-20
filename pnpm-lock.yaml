@@ -6,45 +6,45 @@ settings:
 
 dependencies:
   '@typescript-eslint/utils':
-    specifier: 7.13.1
+    specifier: '7.13'
     version: 7.13.1(eslint@9.5.0)(typescript@5.4.5)
 
 devDependencies:
   '@eslint/js':
-    specifier: ^9.5.0
+    specifier: '9.5'
     version: 9.5.0
   '@types/eslint__js':
-    specifier: ^8.42.3
+    specifier: '8.42'
     version: 8.42.3
   '@types/node':
-    specifier: 20.x
+    specifier: '20'
     version: 20.14.5
   dependency-cruiser:
     specifier: latest
     version: 16.3.3
   esbuild:
-    specifier: 0.21.x
+    specifier: '0.21'
     version: 0.21.5
   eslint:
-    specifier: 9.5.0
+    specifier: '9.5'
     version: 9.5.0
   eslint-plugin-unicorn:
-    specifier: 54.0.0
+    specifier: '54'
     version: 54.0.0(eslint@9.5.0)
   globals:
-    specifier: ^15.6.0
+    specifier: '15'
     version: 15.6.0
   repo-check:
-    specifier: 1.35.x
+    specifier: '1.35'
     version: 1.35.1
   ts-node:
-    specifier: 10.x.x
+    specifier: '10'
     version: 10.9.2(@types/node@20.14.5)(typescript@5.4.5)
   typescript:
-    specifier: 5.4.5
+    specifier: '5.4'
     version: 5.4.5
   typescript-eslint:
-    specifier: ^7.13.1
+    specifier: '7.13'
     version: 7.13.1(eslint@9.5.0)(typescript@5.4.5)
   watchlist:
     specifier: '0'
