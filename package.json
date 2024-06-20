@@ -17,7 +17,7 @@
     "globals": "15",
     "repo-check": "1.35",
     "ts-node": "10",
-    "typescript": "5.4",
+    "typescript": "5.5",
     "typescript-eslint": "7.13",
     "watchlist": "0"
   },
