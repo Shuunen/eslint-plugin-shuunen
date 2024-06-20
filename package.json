@@ -15,9 +15,9 @@
     "eslint": "9.5",
     "eslint-plugin-unicorn": "54",
     "globals": "15",
-    "repo-check": "1.35",
+    "repo-check": "1.36",
     "ts-node": "10",
-    "typescript": "5.4",
+    "typescript": "5.5",
     "typescript-eslint": "7.13",
     "watchlist": "0"
   },
