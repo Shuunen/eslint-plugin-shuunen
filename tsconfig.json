@@ -1,37 +1,22 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
-    "checkJs": true,
-    "esModuleInterop": true,
-    "exactOptionalPropertyTypes": true,
-    "forceConsistentCasingInFileNames": true,
     "lib": [
       "ESNext"
     ],
-    "module": "ES2022",
+    "module": "ESNext",
     "moduleResolution": "Node",
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
-    "noImplicitOverride": true,
-    "noImplicitReturns": true,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "outDir": "./dist",
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "ESNext",
+    "outDir": "dist",
+    "resolveJsonModule": true,
     "verbatimModuleSyntax": true
   },
-  "include": [
-    "src"
+  "exclude": [
+    "node_modules",
+    "dist",
+    "coverage"
   ],
-  "ts-node": {
-    "compilerOptions": {
-      "module": "commonjs"
-    }
-  }
+  "extends": "@tsconfig/strictest/tsconfig.json",
+  "include": [
+    "configs"
+  ]
 }

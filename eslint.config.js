@@ -1,10 +1,11 @@
 // @ts-check
-import unicorn from 'eslint-plugin-unicorn'
-import eslint from '@eslint/js'
-import tsLint from 'typescript-eslint'
-import globals from 'globals'
+const eslint = require('@eslint/js')
+const plugin = require('eslint-plugin-eslint-plugin')
+const unicorn = require('eslint-plugin-unicorn')
+const globals = require('globals')
 
-export default tsLint.config(
+module.exports = [
+  // eslint base
   {
     ignores: ['node_modules/*', 'coverage/*', 'build/*', 'dist/*', 'static/*'],
   },
@@ -14,10 +15,21 @@ export default tsLint.config(
       globals: {
         ...globals.browser,
         ...globals.node,
-      }
-    }
+      },
+    },
   },
-  // @ts-expect-error type issue
+  // unicorn
   unicorn.configs['flat/all'],
-  ...tsLint.configs.recommended,
-)
+  {
+    rules: {
+      'unicorn/prefer-module': 'off',
+    },
+  },
+  // eslint-plugin
+  plugin.configs['flat/all'],
+  {
+    rules: {
+      'eslint-plugin/require-meta-docs-url': 'off', // I have no docs yet
+    },
+  },
+]

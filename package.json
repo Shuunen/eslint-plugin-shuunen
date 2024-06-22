@@ -3,39 +3,48 @@
   "author": "Romain Racamier-Lafon <romain.racamier@gmail.com>",
   "bugs": "https://github.com/Shuunen/eslint-plugin-shuunen/issues",
   "dependencies": {
-    "@typescript-eslint/utils": "7.13"
+    "@eslint/eslintrc": "3.1"
   },
   "description": "My personal ESLint configs & rules",
   "devDependencies": {
+    "@biomejs/biome": "1.8",
     "@eslint/js": "9.5",
-    "@types/eslint__js": "8.42",
+    "@tsconfig/strictest": "2.0",
+    "@types/eslint__eslintrc": "2.1",
     "@types/node": "20",
+    "@vitest/coverage-v8": "1.6",
     "dependency-cruiser": "latest",
     "esbuild": "0.21",
     "eslint": "9.5",
+    "eslint-plugin-eslint-plugin": "6.1",
     "eslint-plugin-unicorn": "54",
     "globals": "15",
+    "npm-parallel": "2",
     "repo-check": "1.36",
-    "ts-node": "10",
     "typescript": "5.5",
-    "typescript-eslint": "7.13",
+    "vitest": "1.6",
     "watchlist": "0"
   },
+  "engines": {
+    "node": ">=20"
+  },
   "files": [
-    "src"
+    "index.js",
+    "rules",
+    "configs"
   ],
   "homepage": "https://github.com/Shuunen/eslint-plugin-shuunen",
   "keywords": [
     "eslint",
-    "plugin",
-    "shuunen"
+    "eslint-plugin",
+    "shuunen",
+    "lint"
   ],
-  "license": "AGPL-3.0",
-  "main": "dist/index.js",
+  "license": "MIT",
+  "main": "index.js",
   "name": "eslint-plugin-shuunen",
   "peerDependencies": {
-    "eslint": "^9.5",
-    "typescript": "*"
+    "eslint": ">=8.57.0"
   },
   "private": false,
   "repository": {
@@ -46,17 +55,22 @@
     "build": "echo no build task is needed && echo build success",
     "check": "pnpm install && echo install success && pnpm build && repo-check && pnpm lint && pnpm test && echo check success",
     "lint": "pnpm lint:tsc && pnpm lint:biome && pnpm lint:eslint && pnpm lint:dep && echo lint success",
-    "lint:biome": "echo no biome yet && echo lint:biome success",
-    "lint:dep": "depcruise src --config && echo lint:dep success",
-    "lint:eslint": "eslint --cache --max-warnings 0 src && echo lint:eslint success",
+    "lint:biome": "biome lint --error-on-warnings --write --unsafe && biome format --write configs rules && echo lint:biome success",
+    "lint:dep": "depcruise configs rules index.js --config && echo lint:dep success",
+    "lint:eslint": "eslint --cache --max-warnings 0 . && echo lint:eslint success",
     "lint:tsc": "tsc --noEmit && echo lint:tsc success",
     "postversion": "git push && git push --tags",
-    "preversion": "pnpm ci",
+    "preversion": "pnpm check",
     "start": "pnpm dev",
-    "test": "echo rework tests && echo test success",
-    "test:watch": "watchlist src -eager -- npm test"
+    "test": "vitest --coverage --run && pnpm test:rules && echo test success",
+    "test:bench": "vitest bench && echo test bench success",
+    "test:rules": "node rules/utils/run-tests.js && echo test:rules success",
+    "test:rules:watch": "watchlist rules -eager -- pnpm test:rules",
+    "test:update": "vitest --run --update && echo test update success",
+    "test:vitest:watch": "vitest --coverage",
+    "test:watch": "parallel test:vitest:watch test:rules:watch",
+    "test:watch:old": "watchlist src -eager -- npm test"
   },
-  "type": "module",
-  "typings": "src/index.ts",
+  "sideEffects": false,
   "version": "0.0.0"
 }
