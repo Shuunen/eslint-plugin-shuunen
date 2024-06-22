@@ -1,4 +1,4 @@
-'use strict'
+// @ts-nocheck
 
 const path = require('node:path')
 const fs = require('node:fs')
@@ -18,62 +18,47 @@ function wrapFixFunction(fix) {
   return fixer => {
     const result = fix(fixer, fixOptions)
 
-    if (isIterable(result)) {
+    if (isIterable(result))
       try {
         return [...result]
       } catch (error) {
-        if (error instanceof FixAbortError) {
-          return
-        }
-
+        // eslint-disable-next-line consistent-return
+        if (error instanceof FixAbortError) return
         /* c8 ignore next */
         throw error
       }
-    }
-
     return result
   }
 }
 
 function reportListenerProblems(problems, context) {
-  if (!problems) {
-    return
-  }
-
-  if (!isIterable(problems)) {
+  if (!problems) return
+  if (!isIterable(problems))
     // @ts-expect-error re-assigning to a new array
     // biome-ignore lint/style/noParameterAssign: needed
-    problems = [problems]
-  }
+    problems = [problems] // eslint-disable-line no-param-reassign
 
   for (const problem of problems) {
-    if (!problem) {
-      continue
-    }
-
+    // eslint-disable-next-line no-continue
+    if (!problem) continue
     problem.fix &&= wrapFixFunction(problem.fix)
-
-    if (Array.isArray(problem.suggest)) {
+    if (Array.isArray(problem.suggest))
       for (const suggest of problem.suggest) {
         suggest.fix &&= wrapFixFunction(suggest.fix)
-
         suggest.data = {
           ...problem.data,
           ...suggest.data,
         }
       }
-    }
-
     context.report(problem)
   }
 }
 
 // `checkVueTemplate` function will wrap `create` function, there is no need to wrap twice
 const wrappedFunctions = new Set()
+
 function reportProblems(create) {
-  if (wrappedFunctions.has(create)) {
-    return create
-  }
+  if (wrappedFunctions.has(create)) return create
 
   const wrapped = context => {
     const listeners = {}
@@ -84,40 +69,29 @@ function reportProblems(create) {
 
     const contextProxy = new Proxy(context, {
       get(target, property, receiver) {
-        if (property === 'on') {
+        if (property === 'on')
           return (selectorOrSelectors, listener) => {
             const selectors = Array.isArray(selectorOrSelectors) ? selectorOrSelectors : [selectorOrSelectors]
-            for (const selector of selectors) {
-              addListener(selector, listener)
-            }
+            for (const selector of selectors) addListener(selector, listener)
           }
-        }
-
-        if (property === 'onExit') {
+        if (property === 'onExit')
           return (selectorOrSelectors, listener) => {
             const selectors = Array.isArray(selectorOrSelectors) ? selectorOrSelectors : [selectorOrSelectors]
-            for (const selector of selectors) {
-              addListener(`${selector}:exit`, listener)
-            }
+            for (const selector of selectors) addListener(`${selector}:exit`, listener)
           }
-        }
-
         return Reflect.get(target, property, receiver)
       },
     })
 
-    for (const [selector, listener] of Object.entries(create(contextProxy) ?? {})) {
-      addListener(selector, listener)
-    }
+    for (const [selector, listener] of Object.entries(create(contextProxy) ?? {})) addListener(selector, listener)
 
     return Object.fromEntries(
+      // eslint-disable-next-line no-shadow
       Object.entries(listeners).map(([selector, listeners]) => [
         selector,
         // Listener arguments can be `codePath, node` or `node`
         (...listenerArguments) => {
-          for (const listener of listeners) {
-            reportListenerProblems(listener(...listenerArguments), context)
-          }
+          for (const listener of listeners) reportListenerProblems(listener(...listenerArguments), context)
         },
       ]),
     )
@@ -133,6 +107,7 @@ function loadRule(ruleId) {
   const rule = require(`../${ruleId}`)
 
   return {
+    create: reportProblems(rule.create),
     meta: {
       // If there is are, options add `[]` so ESLint can validate that no data is passed to the rule.
       // https://github.com/not-an-aardvark/eslint-plugin-eslint-plugin/blob/master/docs/rules/require-meta-schema.md
@@ -142,7 +117,6 @@ function loadRule(ruleId) {
         ...rule.meta.docs,
       },
     },
-    create: reportProblems(rule.create),
   }
 }
 

@@ -1,0 +1,25 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`capNesting B - Complex object 1`] = `
+{
+  "a": {
+    "b": {
+      "c": undefined,
+      "cNull": undefined,
+      "cValue": undefined,
+    },
+    "bArray": [
+      undefined,
+      undefined,
+      undefined,
+    ],
+    "bNull": null,
+    "bValue": "value",
+  },
+  "g": {
+    "h": {
+      "i": undefined,
+    },
+  },
+}
+`;

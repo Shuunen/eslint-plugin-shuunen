@@ -1,182 +1,72 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`index 1`] = `
-"{
+exports[`index - check exported value 1`] = `
+{
+  "configs": {
+    "base": [
+      {
+        "ignores": undefined,
+        "name": undefined,
+      },
+      {
+        "name": undefined,
+        "plugins": undefined,
+        "rules": undefined,
+      },
+    ],
+    "browser": [
+      {
+        "languageOptions": undefined,
+        "name": undefined,
+      },
+    ],
+    "node": [
+      {
+        "languageOptions": undefined,
+        "name": undefined,
+      },
+    ],
+    "vue": [
+      {
+        "languageOptions": undefined,
+        "plugins": undefined,
+      },
+      {
+        "files": undefined,
+        "languageOptions": undefined,
+        "plugins": undefined,
+        "processor": undefined,
+        "rules": undefined,
+      },
+      {
+        "rules": undefined,
+      },
+      {
+        "rules": undefined,
+      },
+      {
+        "rules": undefined,
+      },
+      {
+        "rules": undefined,
+      },
+    ],
+  },
   "meta": {
     "name": "eslint-plugin-shuunen",
-    "version": "0.0.0"
+    "version": "0.0.0",
   },
   "rules": {
     "avoid-name": {
+      "create": [Function],
       "meta": {
-        "schema": [],
-        "type": "suggestion",
-        "docs": {
-          "description": "disallow variables named \`foo\`, it is so old school",
-          "recommended": true
-        },
-        "fixable": "code",
-        "messages": {
-          "avoidName": "Avoid using variables named '{{ name }}'"
-        }
-      }
-    }
+        "docs": undefined,
+        "fixable": undefined,
+        "messages": undefined,
+        "schema": undefined,
+        "type": undefined,
+      },
+    },
   },
-  "configs": {
-    "recommended": {
-      "env": {
-        "es2024": true
-      },
-      "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-      },
-      "plugins": [
-        "shuunen"
-      ],
-      "rules": {
-        "shuunen/avoid-name": "error"
-      }
-    },
-    "all": {
-      "env": {
-        "es2024": true
-      },
-      "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-      },
-      "plugins": [
-        "shuunen"
-      ],
-      "rules": {
-        "shuunen/avoid-name": "error"
-      }
-    },
-    "flat/recommended": {
-      "languageOptions": {
-        "globals": {
-          "ArrayBuffer": false,
-          "DataView": false,
-          "Float32Array": false,
-          "Float64Array": false,
-          "Int16Array": false,
-          "Int32Array": false,
-          "Int8Array": false,
-          "Map": false,
-          "Promise": false,
-          "Proxy": false,
-          "Reflect": false,
-          "Set": false,
-          "Symbol": false,
-          "Uint16Array": false,
-          "Uint32Array": false,
-          "Uint8Array": false,
-          "Uint8ClampedArray": false,
-          "WeakMap": false,
-          "WeakSet": false,
-          "Atomics": false,
-          "SharedArrayBuffer": false,
-          "BigInt": false,
-          "BigInt64Array": false,
-          "BigUint64Array": false,
-          "globalThis": false,
-          "AggregateError": false,
-          "FinalizationRegistry": false,
-          "WeakRef": false
-        }
-      },
-      "name": "shuunen/flat/recommended",
-      "plugins": {
-        "shuunen": {
-          "meta": {
-            "name": "eslint-plugin-shuunen",
-            "version": "0.0.1"
-          },
-          "rules": {
-            "avoid-name": {
-              "meta": {
-                "schema": [],
-                "type": "suggestion",
-                "docs": {
-                  "description": "disallow variables named \`foo\`, it is so old school",
-                  "recommended": true
-                },
-                "fixable": "code",
-                "messages": {
-                  "avoidName": "Avoid using variables named '{{ name }}'"
-                }
-              }
-            }
-          }
-        }
-      },
-      "rules": {
-        "shuunen/avoid-name": "error"
-      }
-    },
-    "flat/all": {
-      "languageOptions": {
-        "globals": {
-          "ArrayBuffer": false,
-          "DataView": false,
-          "Float32Array": false,
-          "Float64Array": false,
-          "Int16Array": false,
-          "Int32Array": false,
-          "Int8Array": false,
-          "Map": false,
-          "Promise": false,
-          "Proxy": false,
-          "Reflect": false,
-          "Set": false,
-          "Symbol": false,
-          "Uint16Array": false,
-          "Uint32Array": false,
-          "Uint8Array": false,
-          "Uint8ClampedArray": false,
-          "WeakMap": false,
-          "WeakSet": false,
-          "Atomics": false,
-          "SharedArrayBuffer": false,
-          "BigInt": false,
-          "BigInt64Array": false,
-          "BigUint64Array": false,
-          "globalThis": false,
-          "AggregateError": false,
-          "FinalizationRegistry": false,
-          "WeakRef": false
-        }
-      },
-      "name": "shuunen/flat/all",
-      "plugins": {
-        "shuunen": {
-          "meta": {
-            "name": "eslint-plugin-shuunen",
-            "version": "0.0.1"
-          },
-          "rules": {
-            "avoid-name": {
-              "meta": {
-                "schema": [],
-                "type": "suggestion",
-                "docs": {
-                  "description": "disallow variables named \`foo\`, it is so old school",
-                  "recommended": true
-                },
-                "fixable": "code",
-                "messages": {
-                  "avoidName": "Avoid using variables named '{{ name }}'"
-                }
-              }
-            }
-          }
-        }
-      },
-      "rules": {
-        "shuunen/avoid-name": "error"
-      }
-    }
-  }
-}"
+}
 `;
