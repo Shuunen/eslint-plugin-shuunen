@@ -59,7 +59,7 @@
     "lint:dep": "depcruise configs rules index.js --config && echo lint:dep success",
     "lint:eslint": "eslint --cache --max-warnings 0 . && echo lint:eslint success",
     "lint:tsc": "tsc --noEmit && echo lint:tsc success",
-    "postversion": "git push && git push --tags",
+    "postversion": "git push && git push --tags && npm publish",
     "preversion": "pnpm check",
     "start": "pnpm dev",
     "test": "vitest --coverage --run && pnpm test:rules && echo test success",
