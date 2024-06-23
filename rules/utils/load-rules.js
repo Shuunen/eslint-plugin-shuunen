@@ -39,7 +39,6 @@ function reportListenerProblems(problems, context) {
     problems = [problems] // eslint-disable-line no-param-reassign
 
   for (const problem of problems) {
-    // eslint-disable-next-line no-continue
     if (!problem) continue
     problem.fix &&= wrapFixFunction(problem.fix)
     if (Array.isArray(problem.suggest))
