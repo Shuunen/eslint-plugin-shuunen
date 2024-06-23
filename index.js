@@ -5,7 +5,8 @@ const unicorn = require('eslint-plugin-unicorn').configs['flat/all'] // @ts-expe
 const perfectionist = require('eslint-plugin-perfectionist/configs/recommended-natural')
 const eslint = require('@eslint/js').configs.all // @ts-expect-error missing types
 const vue = require('eslint-plugin-vue').configs['flat/recommended'] // @ts-expect-error missing types
-const tailwind = require('eslint-plugin-tailwindcss').configs['flat/recommended']
+const tailwind = require('eslint-plugin-tailwindcss').configs['flat/recommended'] // @ts-ignore
+const jsdoc = require('eslint-plugin-jsdoc').configs['flat/recommended']
 
 const rules = loadRules()
 
@@ -73,6 +74,8 @@ const configs = {
         ...eslint.plugins,
         ...unicorn.plugins,
         ...perfectionist.plugins,
+        // @ts-expect-error incorrect types
+        ...jsdoc.plugins,
         shuunen,
       },
       rules: {
@@ -81,7 +84,7 @@ const configs = {
         'comma-dangle': ['error', 'always-multiline'], // 💚 trailing commas
         curly: ['error', 'multi'], // 💚 only on multi
         'func-style': ['error', 'declaration', { allowArrowFunctions: true }], // 💚 prefer function declaration
-        'no-inline-comments': 'off', // 🟨 useless
+        'no-inline-comments': 'off', // 🟨 useless styling
         'no-ternary': 'off', // � well written ternaries are fine
         'no-undefined': 'off', // � rule is understandable but seems too annoying
         'one-var': 'off', // 🟨 useless
@@ -91,6 +94,28 @@ const configs = {
         'perfectionist/sort-imports': 'off', // 🟨 not needed, vscode & biome does this
         ...unicorn.rules,
         'unicorn/prefer-string-replace-all': 'off', // 🔴 not well supported
+        // @ts-expect-error incorrect types
+        ...jsdoc.rules,
+        'jsdoc/newline-after-description': 'off', // 🟨 useless styling
+        'jsdoc/require-jsdoc': [
+          'error',
+          {
+            require: {
+              // biome-ignore lint/style/useNamingConvention: I did not choose this name
+              ArrowFunctionExpression: true,
+              // biome-ignore lint/style/useNamingConvention: I did not choose this name
+              ClassDeclaration: true,
+              // biome-ignore lint/style/useNamingConvention: I did not choose this name
+              FunctionDeclaration: true,
+              // biome-ignore lint/style/useNamingConvention: I did not choose this name
+              FunctionExpression: true,
+              // biome-ignore lint/style/useNamingConvention: I did not choose this name
+              MethodDefinition: true,
+            },
+          },
+        ],
+        // 'jsdoc/require-param-type': 'off', // should be activated for typescript context
+        // 'jsdoc/require-returns-type': 'off', // should be activated for typescript context
         ...myRules,
       },
     },
