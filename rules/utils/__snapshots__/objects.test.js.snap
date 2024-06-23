@@ -4,21 +4,21 @@ exports[`capNesting B - Complex object 1`] = `
 {
   "a": {
     "b": {
-      "c": undefined,
-      "cNull": undefined,
-      "cValue": undefined,
+      "c": "...",
+      "cNull": "...",
+      "cValue": "...",
     },
     "bArray": [
-      undefined,
-      undefined,
-      undefined,
+      "...",
+      "...",
+      "...",
     ],
     "bNull": null,
     "bValue": "value",
   },
   "g": {
     "h": {
-      "i": undefined,
+      "i": "...",
     },
   },
 }

@@ -5,50 +5,63 @@ exports[`index - check exported value 1`] = `
   "configs": {
     "base": [
       {
-        "ignores": undefined,
-        "name": undefined,
+        "ignores": "...",
+        "name": "...",
       },
       {
-        "name": undefined,
-        "plugins": undefined,
-        "rules": undefined,
+        "name": "...",
+        "plugins": "...",
+        "rules": "...",
       },
     ],
     "browser": [
       {
-        "languageOptions": undefined,
-        "name": undefined,
+        "languageOptions": "...",
+        "name": "...",
+      },
+      {
+        "languageOptions": "...",
+        "name": "...",
+        "plugins": "...",
+      },
+      {
+        "name": "...",
+        "rules": "...",
+      },
+      {
+        "name": "...",
+        "settings": "...",
       },
     ],
     "node": [
       {
-        "languageOptions": undefined,
-        "name": undefined,
+        "languageOptions": "...",
+        "name": "...",
       },
     ],
     "vue": [
       {
-        "languageOptions": undefined,
-        "plugins": undefined,
+        "languageOptions": "...",
+        "plugins": "...",
       },
       {
-        "files": undefined,
-        "languageOptions": undefined,
-        "plugins": undefined,
-        "processor": undefined,
-        "rules": undefined,
+        "files": "...",
+        "languageOptions": "...",
+        "plugins": "...",
+        "processor": "...",
+        "rules": "...",
       },
       {
-        "rules": undefined,
+        "rules": "...",
       },
       {
-        "rules": undefined,
+        "rules": "...",
       },
       {
-        "rules": undefined,
+        "rules": "...",
       },
       {
-        "rules": undefined,
+        "rules": "...",
       },
     ],
   },
@@ -60,11 +73,11 @@ exports[`index - check exported value 1`] = `
     "avoid-name": {
       "create": [Function],
       "meta": {
-        "docs": undefined,
-        "fixable": undefined,
-        "messages": undefined,
-        "schema": undefined,
-        "type": undefined,
+        "docs": "...",
+        "fixable": "...",
+        "messages": "...",
+        "schema": "...",
+        "type": "...",
       },
     },
   },

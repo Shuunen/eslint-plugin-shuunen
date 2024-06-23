@@ -24,7 +24,7 @@ it('capNesting A - Simple object', () => {
     {
       "a": {
         "b": {
-          "c": undefined,
+          "c": "...",
         },
       },
     }
