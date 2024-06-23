@@ -84,16 +84,22 @@ const configs = {
         'comma-dangle': ['error', 'always-multiline'], // 💚 trailing commas
         curly: ['error', 'multi'], // 💚 only on multi
         'func-style': ['error', 'declaration', { allowArrowFunctions: true }], // 💚 prefer function declaration
+        'no-continue': 'off', // 🟨 well written continues are fine
         'no-inline-comments': 'off', // 🟨 useless styling
-        'no-ternary': 'off', // � well written ternaries are fine
-        'no-undefined': 'off', // � rule is understandable but seems too annoying
+        'no-magic-numbers': ['error', { ignore: [-1, 0, 1] }], // 💚 magic numbers are bad, but basic ok are ok
+        'no-ternary': 'off', // 🟨 well written ternaries are fine
+        'no-undefined': 'off', // 🟨 rule is understandable but seems too annoying
         'one-var': 'off', // 🟨 useless
+        'prefer-destructuring': 'off', // 🟨 often annoying
         'sort-imports': 'off', // 🟨 not needed, vscode & biome does this
         'sort-keys': 'off', // 🔴 perfectionist does this
         ...perfectionist.rules,
         'perfectionist/sort-imports': 'off', // 🟨 not needed, vscode & biome does this
         ...unicorn.rules,
+        'unicorn/prefer-spread': 'off', // 🔴 not thanks
         'unicorn/prefer-string-replace-all': 'off', // 🔴 not well supported
+        'unicorn/prefer-switch': 'off', // 🔴 not thanks
+        'unicorn/switch-case-braces': 'off', // 🟨 useless styling
         // @ts-expect-error incorrect types
         ...jsdoc.rules,
         'jsdoc/newline-after-description': 'off', // 🟨 useless styling
@@ -134,6 +140,7 @@ const configs = {
       name: `${shortName}/browser/tailwind-settings`,
       settings: {
         tailwindcss: {
+          callees: ['tw', 'utils.tw', 'classnames', 'clsx', 'ctl'],
           whitelist: [String.raw`app\-[a-z-]+`],
         },
       },

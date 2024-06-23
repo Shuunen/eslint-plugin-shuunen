@@ -3,6 +3,8 @@
     "editor.defaultFormatter": "biomejs.biome"
   },
   "cSpell.words": [
-    "antfu"
+    "antfu",
+    "clsx",
+    "lockb"
   ]
 }
