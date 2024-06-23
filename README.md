@@ -64,7 +64,6 @@ module.exports = [
 - [ ] use [eslint-plugin-self](https://github.com/not-an-aardvark/eslint-plugin-self) ?
 - [ ] search interesting plugins from [eslint-plugin-antfu](https://github.com/antfu/eslint-config)
 - [ ] search interesting plugins from [eslint-plugin-hardcore](https://github.com/EvgenyOrekhov/eslint-config-hardcore)
-- [ ] add tailwindcss rules to browser preset
 
 ## Thanks
 

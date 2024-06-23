@@ -4,7 +4,8 @@ const { name, version } = require('./package.json') // @ts-expect-error missing 
 const unicorn = require('eslint-plugin-unicorn').configs['flat/all'] // @ts-expect-error missing types
 const perfectionist = require('eslint-plugin-perfectionist/configs/recommended-natural')
 const eslint = require('@eslint/js').configs.all // @ts-expect-error missing types
-const vue = require('eslint-plugin-vue').configs['flat/recommended']
+const vue = require('eslint-plugin-vue').configs['flat/recommended'] // @ts-expect-error missing types
+const tailwind = require('eslint-plugin-tailwindcss').configs['flat/recommended']
 
 const rules = loadRules()
 
@@ -67,13 +68,6 @@ const configs = {
     },
     {
       // files: ['**/*.js', '**/*.mjs', '**/*.cjs', '**/*.ts', '**/*.d.ts', '**/*.tsx'], // needed ?
-      // languageOptions: {
-      //   globals: {
-      //     // ideally, this should be a separate package
-      //     ...globals.browser,
-      //     ...globals.node,
-      //   },
-      // },
       name: `${shortName}/base`,
       plugins: {
         ...eslint.plugins,
@@ -109,6 +103,15 @@ const configs = {
         },
       },
       name: `${shortName}/browser`,
+    },
+    ...tailwind,
+    {
+      name: `${shortName}/browser/tailwind-settings`,
+      settings: {
+        tailwindcss: {
+          whitelist: [String.raw`app\-[a-z-]+`],
+        },
+      },
     },
   ],
   node: [
