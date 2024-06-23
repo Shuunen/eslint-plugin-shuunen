@@ -76,5 +76,5 @@
     "test:watch:old": "watchlist src -eager -- npm test"
   },
   "sideEffects": false,
-  "version": "0.0.3"
+  "version": "0.0.4"
 }
