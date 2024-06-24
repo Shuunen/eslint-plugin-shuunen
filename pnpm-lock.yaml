@@ -9,8 +9,8 @@ dependencies:
     specifier: '3.1'
     version: 3.1.0
   eslint-plugin-jsdoc:
-    specifier: '48.3'
-    version: 48.3.0(eslint@9.5.0)
+    specifier: '48.4'
+    version: 48.4.0(eslint@9.5.0)
   eslint-plugin-perfectionist:
     specifier: '2.11'
     version: 2.11.0(eslint@9.5.0)(typescript@5.5.2)
@@ -1365,8 +1365,8 @@ packages:
       estraverse: 5.3.0
     dev: true
 
-  /eslint-plugin-jsdoc@48.3.0(eslint@9.5.0):
-    resolution: {integrity: sha512-lzQSh2gjPqrqYTL0774sLj/rJywP1UESxD43xBwAlehuI2H6mIKTwj6i4tdvVzmUMflx8yMzHzy4e4XWrKaNZQ==}
+  /eslint-plugin-jsdoc@48.4.0(eslint@9.5.0):
+    resolution: {integrity: sha512-xBUxuAx03cKoEA7y+MYSUdwyN8AJyZHbAJ257sOFXgVgCScm574S4zEYJpBoARwaCu4chhCbvA+gdm+00whlxA==}
     engines: {node: '>=18'}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
