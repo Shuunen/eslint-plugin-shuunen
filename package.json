@@ -23,7 +23,7 @@
     "dependency-cruiser": "latest",
     "esbuild": "0.21",
     "eslint": "9.5",
-    "eslint-plugin-eslint-plugin": "6.1",
+    "eslint-plugin-eslint-plugin": "6.2",
     "npm-parallel": "2",
     "repo-check": "1.36",
     "typescript": "5.5",
