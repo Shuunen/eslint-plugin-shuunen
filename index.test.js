@@ -5,7 +5,7 @@ const index = require('./index')
 
 it('index - check exported value', () => {
   // eslint-disable-next-line no-magic-numbers
-  const result = capNesting(index, 4)
+  const result = capNesting(index, 5)
   if (!result) throw new Error('No result')
   // @ts-expect-error missing types
   result.meta.version = '0.0.0'
