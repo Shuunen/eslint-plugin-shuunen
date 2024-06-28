@@ -18,6 +18,9 @@
   ],
   "extends": "@tsconfig/strictest/tsconfig.json",
   "include": [
+    "constants",
+    "configs",
+    "src",
     "*.js"
   ]
 }

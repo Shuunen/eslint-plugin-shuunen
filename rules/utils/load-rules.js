@@ -1,11 +1,20 @@
 // @ts-nocheck
+//
+// 8888ba.88ba               888888ba           dP
+// 88  `8b  `8b              88    `8b          88
+// 88   88   88 dP    dP    a88aaaa8P' dP    dP 88 .d8888b. .d8888b.
+// 88   88   88 88    88     88   `8b. 88    88 88 88ooo0d8 Y8ooooo.
+// 88   88   88 88.  .88     88     88 88.  .88 88 88.  ...       88
+// dP   dP   dP `8888P88     dP     dP `88888P' dP `88888P' `88888P'
+// oooooooooooooo~~~~.88~oooooooooooooooooooooooooooooooooooooooooooo
+//               d8888P
 
 const path = require('node:path')
 const fs = require('node:fs')
 
 const isIterable = object => typeof object?.[Symbol.iterator] === 'function'
 
-// eslint-disable-next-line unicorn/custom-error-definition
+// eslint-disable-next-line unicorn/custom-error-definition, no-restricted-syntax
 class FixAbortError extends Error {}
 
 const fixOptions = {
