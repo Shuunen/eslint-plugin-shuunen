@@ -5,12 +5,12 @@ const eslint = require('./eslint.js')
 const jsdoc = require('./jsdoc.js')
 const { ignores } = require('../src/ignores.js')
 const { myRules, shuunen } = require('./shuunen.js')
-// _____
-// __|___  |__  _____   _____  __  __  __  ______  ______  _____
-// |      >    ||     | /     \|  \/  \|  ||   ___||   ___||     |
-// |     <     ||     \ |     ||     /\   | `-.`-. |   ___||     \
-// |______>  __||__|\__\\_____/|____/  \__||______||______||__|\__\
-//   |_____|
+//
+//     dBBBBb dBBBBb  .dBUBBA   dBEDS
+//       dBP      BB  BP
+//   adBBQ'   dBP BB  `BBBBb  dBBP
+//  dB' db   dBP  BB     dBP dBP
+// adcBBQ'  dBBBBBBBdBEBOP' dBUBBA
 //
 /** @type {import('eslint').Linter.FlatConfig[]} */
 const config = [
