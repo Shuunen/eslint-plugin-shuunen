@@ -1,4 +1,5 @@
-const eslint = require('@eslint/js').configs.all
+// @ts-expect-error missing types
+const { plugins, rules } = require('@eslint/js').configs.all
 //
 // :::===== :::===  :::      ::: :::= === :::====
 // :::      :::     :::      ::: :::===== :::====
@@ -8,9 +9,9 @@ const eslint = require('@eslint/js').configs.all
 //
 /** @type {import('eslint').Linter.FlatConfig} */
 const config = {
-  plugins: eslint.plugins,
+  plugins,
   rules: {
-    ...eslint.rules,
+    ...rules,
     'capitalized-comments': 'off', // 🟨 useless
     'comma-dangle': ['error', 'always-multiline'], // 💚 trailing commas
     curly: ['error', 'multi'], // 💚 only on multi

@@ -1,5 +1,5 @@
 // @ts-expect-error missing types
-const perfectionist = require('eslint-plugin-perfectionist/configs/recommended-natural')
+const { plugins, rules } = require('eslint-plugin-perfectionist/configs/recommended-natural')
 //
 // /=\        /=         |-                 |-
 // |=/ /=\ /= |= /=\ /=: |  = /=\ /=\ = /== |
@@ -7,9 +7,9 @@ const perfectionist = require('eslint-plugin-perfectionist/configs/recommended-n
 //
 /** @type {import('eslint').Linter.FlatConfig} */
 const config = {
-  plugins: perfectionist.plugins,
+  plugins,
   rules: {
-    ...perfectionist.rules,
+    ...rules,
     'perfectionist/sort-imports': 'off', // 🟨 not needed, vscode & biome does this
   },
 }
