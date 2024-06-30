@@ -35,8 +35,10 @@
     "node": ">=20"
   },
   "files": [
+    "configs",
     "index.js",
-    "rules"
+    "rules",
+    "src"
   ],
   "homepage": "https://github.com/Shuunen/eslint-plugin-shuunen",
   "keywords": [
