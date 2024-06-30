@@ -22,7 +22,7 @@
     "@types/node": "20",
     "@vitest/coverage-v8": "1.6",
     "dependency-cruiser": "latest",
-    "esbuild": "0.21",
+    "esbuild": "0.22",
     "eslint": "9.6",
     "eslint-plugin-eslint-plugin": "6.2",
     "npm-parallel": "2",
