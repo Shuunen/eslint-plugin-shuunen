@@ -37,5 +37,15 @@ const config = [
       ...myRules,
     },
   },
+  {
+    files: ['**/*.test.*'],
+    name: `${shortName}/base/tests-overrides`,
+    rules: {
+      'max-lines-per-function': 'off', // 🟨 tests can be long
+      'max-statements': 'off', // 🟨 tests can be long
+      'no-magic-numbers': 'off', // 🟨 mess with snaps
+      'unicorn/template-indent': 'off', // 🟨 mess with snaps
+    },
+  },
 ]
 module.exports = config

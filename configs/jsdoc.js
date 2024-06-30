@@ -32,8 +32,6 @@ const config = {
         },
       },
     ],
-    // 'jsdoc/require-param-type': 'off', // should be activated for typescript context
-    // 'jsdoc/require-returns-type': 'off', // should be activated for typescript context
   },
 }
 module.exports = config

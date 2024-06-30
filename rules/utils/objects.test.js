@@ -1,4 +1,3 @@
-/* eslint-disable no-magic-numbers */
 /* eslint-disable unicorn/no-null */
 /* eslint-disable id-length */
 import { expect, it } from 'vitest'
