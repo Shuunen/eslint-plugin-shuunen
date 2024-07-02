@@ -24,8 +24,8 @@ dependencies:
     specifier: '9.26'
     version: 9.26.0(eslint@9.6.0)
   globals:
-    specifier: '15.6'
-    version: 15.6.0
+    specifier: '15.8'
+    version: 15.8.0
   typescript-eslint:
     specifier: '7.14'
     version: 7.14.1(eslint@9.6.0)(typescript@5.5.2)
@@ -2133,8 +2133,8 @@ packages:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
     engines: {node: '>=18'}
 
-  /globals@15.6.0:
-    resolution: {integrity: sha512-UzcJi88Hw//CurUIRa9Jxb0vgOCcuD/MNjwmXp633cyaRKkCWACkoqHCtfZv43b1kqXGg/fpOa8bwgacCeXsVg==}
+  /globals@15.8.0:
+    resolution: {integrity: sha512-VZAJ4cewHTExBWDHR6yptdIBlx9YSSZuwojj9Nt5mBRXQzrKakDsVKQ1J63sklLvzAJm0X5+RpO4i3Y2hcOnFw==}
     engines: {node: '>=18'}
     dev: false
 
