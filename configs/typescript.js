@@ -108,5 +108,14 @@ const config = [
       '@typescript-eslint/no-magic-numbers': 'off', // 🟨 mess with snaps
     },
   },
+  {
+    files: ['**/*.js'],
+    name: `${shortName}/typescript/js-overrides`,
+    rules: {
+      '@typescript-eslint/explicit-member-accessibility': 'off', // 🟨 cannot deal with it in js
+      '@typescript-eslint/prefer-readonly-parameter-types': 'off', // 🟨 cannot deal with it in js
+      '@typescript-eslint/use-unknown-in-catch-callback-variable': 'off', // 🟨 cannot deal with it in js
+    },
+  },
 ]
 module.exports = config
