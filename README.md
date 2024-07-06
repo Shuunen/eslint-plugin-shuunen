@@ -61,7 +61,8 @@ module.exports = [
 
 ## TODO
 
-- [ ] use [eslint-plugin-self](https://github.com/not-an-aardvark/eslint-plugin-self) ?
+- [ ] use a plugin for react
+- [ ] merge typescript into base because it works on js ^^
 - [ ] search interesting plugins from [eslint-plugin-antfu](https://github.com/antfu/eslint-config)
 - [ ] search interesting plugins from [eslint-plugin-hardcore](https://github.com/EvgenyOrekhov/eslint-config-hardcore)
 - [ ] test to build a index.min.js file and see how it impact :
