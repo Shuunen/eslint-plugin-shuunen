@@ -8,9 +8,9 @@
     "eslint-plugin-perfectionist": "2.11",
     "eslint-plugin-tailwindcss": "3.17",
     "eslint-plugin-unicorn": "54.0",
-    "eslint-plugin-vue": "9.26",
-    "globals": "15.6",
-    "typescript-eslint": "7.14"
+    "eslint-plugin-vue": "9.27",
+    "globals": "15.8",
+    "typescript-eslint": "7.15"
   },
   "description": "My personal ESLint configs & rules",
   "devDependencies": {
