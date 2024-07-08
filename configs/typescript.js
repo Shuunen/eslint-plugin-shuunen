@@ -14,26 +14,25 @@ const { shortName } = require('../src/constants.js')
 const [base, recommended, all] = tsEslint
 /** @type {import('eslint').Linter.FlatConfig[]} */
 const config = [
-  base,
-  recommended,
   {
+    ...base,
+    ...recommended,
     ...all,
+    files: [...recommended.files, '**/*.js', '**/*.cjs'],
     languageOptions: {
+      ...base.languageOptions,
       ...all.languageOptions,
       parserOptions: {
         extraFileExtensions: ['.vue'],
         parser: '@typescript-eslint/parser',
-      },
-    },
-  },
-  {
-    languageOptions: {
-      parserOptions: {
         project: true,
       },
     },
-    name: `${shortName}/typescript/rules`,
+    name: `${shortName}/typescript`,
     rules: {
+      ...base.rules,
+      ...recommended.rules,
+      ...all.rules,
       '@typescript-eslint/array-type': 'off', // 💚 let use T[] or Array<T>
       '@typescript-eslint/consistent-type-assertions': ['error', { assertionStyle: 'never' }], // 💚 avoid type assertion
       '@typescript-eslint/consistent-type-definitions': 'off', // 🔴 let me use type declaration
