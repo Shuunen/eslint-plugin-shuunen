@@ -17,6 +17,8 @@ const config = {
     complexity: ['error', { max: 9 }],
     curly: ['error', 'multi'], // 💚 only on multi
     'func-style': ['error', 'declaration', { allowArrowFunctions: true }], // 💚 prefer function declaration
+    'line-comment-position': 'off', // 🟨 useless
+    'multiline-comment-style': 'off', // 🟨 useless
     'no-continue': 'off', // 🟨 well written continues are fine
     'no-inline-comments': 'off', // 🟨 useless styling
     'no-magic-numbers': ['error', { ignore: [-1, 0, 1], ignoreClassFieldInitialValues: true, ignoreDefaultValues: true }], // 💚 magic numbers are bad, but basic ok are ok
