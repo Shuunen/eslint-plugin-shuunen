@@ -11,13 +11,25 @@ const { shortName } = require('../src/constants.js')
 // ::::::::ooP'.8 :::::::::::::::::::::::::::::::::::8 ::::::::::
 // ::::::::...::..:::::::::::::::::::::::::::::::::::..::::::::::
 //
+const [base, recommended, all] = tsEslint
 /** @type {import('eslint').Linter.FlatConfig[]} */
 const config = [
-  ...tsEslint,
+  base,
+  recommended,
+  {
+    ...all,
+    languageOptions: {
+      ...all.languageOptions,
+      parserOptions: {
+        extraFileExtensions: ['.vue'],
+        parser: '@typescript-eslint/parser',
+      },
+    },
+  },
   {
     languageOptions: {
       parserOptions: {
-        project: 'tsconfig.json',
+        project: true,
       },
     },
     name: `${shortName}/typescript/rules`,

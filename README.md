@@ -37,7 +37,7 @@ module.exports = [            // 🥗 compose your config
   ...shuunen.configs.base,    // 🥚 eslint/all + unicorn/all + perfectionist/natural
   ...shuunen.configs.node,    // 🥕 globals for node
   ...shuunen.configs.browser, // 🥑 globals for browser
-  ...shuunen.configs.vue,     // 🥔 vue/recommended
+  shuunen.configs.vue,        // 🥔 vue/recommended
 ]
 ```
 
