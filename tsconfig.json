@@ -21,6 +21,7 @@
     "constants",
     "configs",
     "src",
-    "*.js"
+    "*.js",
+    "*.cjs"
   ]
 }
