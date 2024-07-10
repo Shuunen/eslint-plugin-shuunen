@@ -5,7 +5,7 @@ const typescript = require('./configs/typescript.js')
 const vue = require('./configs/vue.js')
 const { shuunen } = require('./configs/shuunen.js')
 
-/** @type {Record<'base' | 'browser' | 'node' | 'typescript' | 'vue', import('eslint').Linter.FlatConfig[]>} */
+/** @type {import('./index.js').Configs} */
 const configs = {
   base,
   browser,
@@ -14,6 +14,7 @@ const configs = {
   vue,
 }
 
+/** @type {import('./index.js').Plugin} */
 const plugin = { ...shuunen, configs }
 
 module.exports = plugin

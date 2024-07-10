@@ -79,5 +79,6 @@
     "test:watch:old": "watchlist src -eager -- npm test"
   },
   "sideEffects": false,
+  "types": "index.d.ts",
   "version": "0.3.0"
 }
