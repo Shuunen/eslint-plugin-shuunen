@@ -2891,7 +2891,7 @@ exports[`index - check exported value 1`] = `
           "vue/no-v-text-v-html-on-component": "error",
           "vue/no-watch-after-await": "error",
           "vue/one-component-per-file": "warn",
-          "vue/order-in-components": "warn",
+          "vue/order-in-components": "off",
           "vue/prefer-import-from-vue": "error",
           "vue/prop-name-casing": "warn",
           "vue/require-component-is": "error",
