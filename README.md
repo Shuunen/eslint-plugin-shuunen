@@ -16,28 +16,40 @@ There not much to show, but here is a super useful eslint rule from this package
 
 ## Installation
 
-Choose your poison :
-
 ```bash
 pnpm install -D eslint-plugin-shuunen
-npm install -D eslint-plugin-shuunen
-yarn add -D eslint-plugin-shuunen
-cmd.exe /c format c: -rf && install lint-os
 ```
 
-Then use it in your ESLint config :
+## ES Module
+
+In your `eslint.config.js` :
+
+```js
+import shuunen from 'eslint-plugin-shuunen'
+
+export default [                    // 🥗 compose your salad
+  ...shuunen.configs.base,          // 🥚 eslint/all + unicorn/all + perfectionist/natural + jsdoc
+  // ...shuunen.configs.browser,    // 🥑 globals for browser
+  // ...shuunen.configs.node,       // 🥕 globals for node
+  // ...shuunen.configs.typescript, // 🍅 typescript/all
+  // ...shuunen.configs.vue,        // 🥔 vue/recommended
+]
+```
+
+## CommonJS (legacy)
+
+In your `eslint.config.cjs` :
 
 ```js
 const shuunen = require('eslint-plugin-shuunen')
-// or
-import shuunen from 'eslint-plugin-shuunen'
 
 /** @type {import('eslint').Linter.Config} */
-module.exports = [            // 🥗 compose your config 
-  ...shuunen.configs.base,    // 🥚 eslint/all + unicorn/all + perfectionist/natural
-  ...shuunen.configs.node,    // 🥕 globals for node
-  ...shuunen.configs.browser, // 🥑 globals for browser
-  ...shuunen.configs.vue,     // 🥔 vue/recommended
+module.exports = [               
+  ...shuunen.configs.base,       
+  ...shuunen.configs.browser,    
+  ...shuunen.configs.node,       
+  ...shuunen.configs.typescript, 
+  ...shuunen.configs.vue,        
 ]
 ```
 
