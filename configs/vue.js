@@ -27,6 +27,7 @@ const config = [
       'vue/html-closing-bracket-newline': 'off', // styling
       'vue/html-indent': 'off', // styling
       'vue/max-attributes-per-line': 'off', // styling
+      'vue/order-in-components': 'off', // styling, perfectionist does this
       'vue/singleline-html-element-content-newline': 'off', // styling
     },
   },
