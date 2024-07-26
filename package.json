@@ -15,7 +15,7 @@
   "description": "My personal ESLint configs & rules",
   "devDependencies": {
     "@biomejs/biome": "1.8",
-    "@eslint/js": "9.7",
+    "@eslint/js": "9.8",
     "@tsconfig/strictest": "2.0",
     "@types/eslint__eslintrc": "2.1",
     "@types/eslint__js": "8.42",
@@ -23,7 +23,7 @@
     "@vitest/coverage-v8": "2.0",
     "dependency-cruiser": "latest",
     "esbuild": "0.23",
-    "eslint": "9.7",
+    "eslint": "9.8",
     "eslint-plugin-eslint-plugin": "6.2",
     "npm-parallel": "2",
     "repo-check": "1.37",
