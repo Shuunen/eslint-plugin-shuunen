@@ -8,7 +8,7 @@
     "eslint-plugin-perfectionist": "2.11",
     "eslint-plugin-tailwindcss": "3.17",
     "eslint-plugin-unicorn": "54.0",
-    "eslint-plugin-vue": "9.27",
+    "eslint-plugin-vue": "9.28",
     "globals": "15.8",
     "typescript-eslint": "7.15"
   },
