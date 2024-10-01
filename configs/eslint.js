@@ -7,7 +7,7 @@ const { plugins, rules } = require('@eslint/js').configs.all
 // ===          === ===      === === ====   ===
 // ======== ======  ======== === ===  ===   ===
 //
-/** @type {import('eslint').Linter.FlatConfig} */
+/** @type {import('eslint').Linter.Config} */
 const config = {
   plugins,
   rules: {

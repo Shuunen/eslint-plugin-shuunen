@@ -11,7 +11,7 @@ const { shortName } = require('../src/constants.js')
 //       /^^        /^^/^^  /^^^^
 //
 const [, base, essential, stronglyRecommended, recommended] = vue
-/** @type {import('eslint').Linter.FlatConfig[]} */
+/** @type {import('eslint').Linter.Config[]} */
 const config = [
   {
     ...base,

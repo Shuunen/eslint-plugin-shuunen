@@ -9,7 +9,7 @@ const { shortName } = require('../src/constants.js')
 //  8       `888  888   888 888   888  888    .o
 // o8o        `8  `Y8bod8P' `Y8bod88P" `Y8bod8P'
 //
-/** @type {import('eslint').Linter.FlatConfig[]} */
+/** @type {import('eslint').Linter.Config[]} */
 const config = [
   {
     languageOptions: {

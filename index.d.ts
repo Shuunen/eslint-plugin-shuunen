@@ -2,11 +2,11 @@
 import type { ESLint, Linter } from 'eslint'
 
 export type Configs = {
-  base: Linter.FlatConfig[]
-  node: Linter.FlatConfig[]
-  browser: Linter.FlatConfig[]
-  typescript: Linter.FlatConfig[]
-  vue: Linter.FlatConfig[]
+  base: Linter.Config[]
+  node: Linter.Config[]
+  browser: Linter.Config[]
+  typescript: Linter.Config[]
+  vue: Linter.Config[]
 }
 
 export type Plugin = ESLint.Plugin & { configs: Configs }

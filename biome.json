@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.8.2/schema.json",
+  "$schema": "https://biomejs.dev/schemas/1.9.2/schema.json",
   "files": {
     "ignore": [
       "node_modules/**",
@@ -37,7 +37,8 @@
         "useLiteralKeys": "off"
       },
       "correctness": {
-        "noNodejsModules": "off"
+        "noNodejsModules": "off",
+        "useImportExtensions": "off"
       },
       "style": {
         "noDefaultExport": "off",
@@ -51,5 +52,20 @@
   },
   "organizeImports": {
     "enabled": true
-  }
+  },
+  "overrides": [
+    {
+      "include": [
+        "**/run-tests.js"
+      ],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noConsole": "off",
+            "noConsoleLog": "off"
+          }
+        }
+      }
+    }
+  ]
 }

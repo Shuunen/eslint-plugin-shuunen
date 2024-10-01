@@ -4,17 +4,17 @@
   "bugs": "https://github.com/Shuunen/eslint-plugin-shuunen/issues",
   "dependencies": {
     "@eslint/eslintrc": "3.1",
-    "eslint-plugin-jsdoc": "48.5",
-    "eslint-plugin-perfectionist": "2.11",
+    "eslint-plugin-jsdoc": "50.3",
+    "eslint-plugin-perfectionist": "3.8",
     "eslint-plugin-tailwindcss": "3.17",
-    "eslint-plugin-unicorn": "54.0",
+    "eslint-plugin-unicorn": "55.0",
     "eslint-plugin-vue": "9.28",
-    "globals": "15.8",
-    "typescript-eslint": "7.15"
+    "globals": "15.9",
+    "typescript-eslint": "8.8"
   },
   "description": "My personal ESLint configs & rules",
   "devDependencies": {
-    "@biomejs/biome": "1.8",
+    "@biomejs/biome": "1.9",
     "@eslint/js": "9.11",
     "@tsconfig/strictest": "2.0",
     "@types/eslint__eslintrc": "2.1",
@@ -25,11 +25,11 @@
     "esbuild": "0.24",
     "eslint": "9.11",
     "eslint-plugin-eslint-plugin": "6.2",
-    "npm-parallel": "2",
+    "npm-parallel": "2.0",
     "repo-check": "1.37",
     "typescript": "5.6",
     "vitest": "2.1",
-    "watchlist": "0"
+    "watchlist": "0.3"
   },
   "engines": {
     "node": ">=20"
@@ -62,7 +62,7 @@
     "build": "echo no build task is needed && echo build success",
     "check": "pnpm install && echo install success && pnpm build && repo-check && pnpm lint && pnpm test && echo check success",
     "lint": "pnpm lint:tsc && pnpm lint:biome && pnpm lint:eslint && pnpm lint:dep && echo lint success",
-    "lint:biome": "biome lint --error-on-warnings --write --unsafe && biome format --write rules && echo lint:biome success",
+    "lint:biome": "biome check --error-on-warnings --write --unsafe && echo lint:biome success",
     "lint:dep": "depcruise rules index.js --config && echo lint:dep success",
     "lint:eslint": "eslint --cache --max-warnings 0 . && echo lint:eslint success",
     "lint:tsc": "tsc --noEmit && echo lint:tsc success",

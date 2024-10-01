@@ -12,7 +12,7 @@ const { myRules, shuunen } = require('./shuunen.js')
 //  dB' db   dBP  BB     dBP dBP
 // adcBBQ'  dBBBBBBBdBEBOP' dBUBBA
 //
-/** @type {import('eslint').Linter.FlatConfig[]} */
+/** @type {import('eslint').Linter.Config[]} */
 const config = [
   {
     ignores,

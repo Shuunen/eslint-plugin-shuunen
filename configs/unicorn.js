@@ -9,7 +9,7 @@ const { plugins, rules } = require('eslint-plugin-unicorn').configs['flat/all']
 // #     # #   ## # #    # #    # #   #  #   ##
 //  #####  #    # #  ####   ####  #    # #    #
 //
-/** @type {import('eslint').Linter.FlatConfig} */
+/** @type {import('eslint').Linter.Config} */
 const config = {
   plugins,
   rules: {

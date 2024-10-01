@@ -11,7 +11,7 @@ const { shortName } = require('../src/constants.js')
 //     O     o   O  O  o   o  O  O O   O   o O   o
 //     o'    `OoO'o o' Oo  `Oo'oO' o'  o   O `OoO'o
 //
-/** @type {import('eslint').Linter.FlatConfig[]} */
+/** @type {import('eslint').Linter.Config[]} */
 const config = [
   ...tailwind,
   {

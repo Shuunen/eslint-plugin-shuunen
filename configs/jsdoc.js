@@ -9,7 +9,7 @@ const { plugins, rules } = require('eslint-plugin-jsdoc').configs['flat/recommen
 // MM.     .MM Mb.     .dM M       .MM `88888P' `88888P'
 // MMMMMMMMMMM MMMMMMMMMMM MMMMMMMMMMM
 //
-/** @type {import('eslint').Linter.FlatConfig} */
+/** @type {import('eslint').Linter.Config} */
 const config = {
   plugins,
   rules: {

@@ -12,7 +12,7 @@ const { shortName } = require('../src/constants.js')
 // ::::::::...::..:::::::::::::::::::::::::::::::::::..::::::::::
 //
 const [base, recommended, all] = tsEslint
-/** @type {import('eslint').Linter.FlatConfig[]} */
+/** @type {import('eslint').Linter.Config[]} */
 const config = [
   {
     ...base,

@@ -8,7 +8,7 @@ const tailwind = require('./tailwind.js')
 // |______>  __||__|\__\\_____/|____/  \__||______||______||__|\__\
 //   |_____|
 //
-/** @type {import('eslint').Linter.FlatConfig[]} */
+/** @type {import('eslint').Linter.Config[]} */
 const config = [
   {
     languageOptions: {
