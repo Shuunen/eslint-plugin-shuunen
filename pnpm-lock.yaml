@@ -24,8 +24,8 @@ dependencies:
     specifier: '9.28'
     version: 9.28.0(eslint@9.12.0)
   globals:
-    specifier: '15.9'
-    version: 15.9.0
+    specifier: '15.11'
+    version: 15.11.0
   typescript-eslint:
     specifier: '8.8'
     version: 8.8.0(eslint@9.12.0)(typescript@5.6.2)
@@ -1733,7 +1733,7 @@ packages:
       core-js-compat: 3.38.1
       eslint: 9.12.0
       esquery: 1.6.0
-      globals: 15.9.0
+      globals: 15.11.0
       indent-string: 4.0.0
       is-builtin-module: 3.2.1
       jsesc: 3.0.2
@@ -2009,8 +2009,8 @@ packages:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
     engines: {node: '>=18'}
 
-  /globals@15.9.0:
-    resolution: {integrity: sha512-SmSKyLLKFbSr6rptvP8izbyxJL4ILwqO9Jg23UA0sDlGlu58V59D1//I3vlc0KJphVdUR7vMjHIplYnzBxorQA==}
+  /globals@15.11.0:
+    resolution: {integrity: sha512-yeyNSjdbyVaWurlwCpcA6XNBrHTMIeDdj0/hnvX/OLJ9ekOXYbLsLinH/MucQyGvNnXhidTdNhTtJaffL2sMfw==}
     engines: {node: '>=18'}
     dev: false
 
