@@ -62,8 +62,8 @@ devDependencies:
     specifier: '9.13'
     version: 9.13.0
   eslint-plugin-eslint-plugin:
-    specifier: '6.2'
-    version: 6.2.0(eslint@9.13.0)
+    specifier: '6.3'
+    version: 6.3.0(eslint@9.13.0)
   npm-parallel:
     specifier: '2.0'
     version: 2.0.1
@@ -1706,8 +1706,8 @@ packages:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
 
-  /eslint-plugin-eslint-plugin@6.2.0(eslint@9.13.0):
-    resolution: {integrity: sha512-+SSHlThUMBb6MhXl/CqNhKvnUY3111s/1vEcu+paOwTJzniTanRZCfl0kQXNfK57XsWJ5aRsiwMlPg/FgnYsag==}
+  /eslint-plugin-eslint-plugin@6.3.0(eslint@9.13.0):
+    resolution: {integrity: sha512-R6Z/rPGY2Bl8Xf78/UikevEVVKve8L3b0We787U3GLH6f8RhmGWT6CcvlQkNsZDaHYoNfn/aIZKK438iF1A6iw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.23.0'
