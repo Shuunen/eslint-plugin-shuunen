@@ -26,7 +26,7 @@
     "eslint": "9.14",
     "eslint-plugin-eslint-plugin": "6.3",
     "npm-parallel": "2.0",
-    "repo-check": "1.38",
+    "repo-check": "1.39",
     "typescript": "5.7",
     "vitest": "2.1",
     "watchlist": "0.3"
