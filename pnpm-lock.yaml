@@ -18,8 +18,8 @@ dependencies:
     specifier: '3.17'
     version: 3.17.4(tailwindcss@3.4.13)
   eslint-plugin-unicorn:
-    specifier: '55.0'
-    version: 55.0.0(eslint@9.14.0)
+    specifier: '56.0'
+    version: 56.0.1(eslint@9.14.0)
   eslint-plugin-vue:
     specifier: '9.28'
     version: 9.28.0(eslint@9.14.0)
@@ -1800,8 +1800,8 @@ packages:
       tailwindcss: 3.4.13
     dev: false
 
-  /eslint-plugin-unicorn@55.0.0(eslint@9.14.0):
-    resolution: {integrity: sha512-n3AKiVpY2/uDcGrS3+QsYDkjPfaOrNrsfQxU9nt5nitd9KuvVXrfAvgCO9DYPSfap+Gqjw9EOrXIsBp5tlHZjA==}
+  /eslint-plugin-unicorn@56.0.1(eslint@9.14.0):
+    resolution: {integrity: sha512-FwVV0Uwf8XPfVnKSGpMg7NtlZh0G0gBarCaFcMUOoqPxXryxdYxTRRv4kH6B9TFCVIrjRXG+emcxIk2ayZilog==}
     engines: {node: '>=18.18'}
     peerDependencies:
       eslint: '>=8.56.0'
