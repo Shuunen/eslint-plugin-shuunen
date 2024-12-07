@@ -9,77 +9,77 @@ importers:
   .:
     dependencies:
       '@eslint/eslintrc':
-        specifier: ^3.2
+        specifier: '3.2'
         version: 3.2.0
       eslint-plugin-jsdoc:
-        specifier: ^50.6
+        specifier: '50.6'
         version: 50.6.0(eslint@9.16.0(jiti@1.21.6))
       eslint-plugin-perfectionist:
-        specifier: ^4.2
+        specifier: '4.2'
         version: 4.2.0(eslint@9.16.0(jiti@1.21.6))(typescript@5.7.2)
       eslint-plugin-tailwindcss:
-        specifier: ^3.17
+        specifier: '3.17'
         version: 3.17.5(tailwindcss@3.4.13)
       eslint-plugin-unicorn:
-        specifier: ^56.0
+        specifier: '56.0'
         version: 56.0.1(eslint@9.16.0(jiti@1.21.6))
       eslint-plugin-vue:
-        specifier: ^9.32
+        specifier: '9.32'
         version: 9.32.0(eslint@9.16.0(jiti@1.21.6))
       globals:
-        specifier: ^15.13
+        specifier: '15.13'
         version: 15.13.0
       typescript-eslint:
-        specifier: ^8.17
+        specifier: '8.17'
         version: 8.17.0(eslint@9.16.0(jiti@1.21.6))(typescript@5.7.2)
     devDependencies:
       '@biomejs/biome':
-        specifier: ^1.9
+        specifier: '1.9'
         version: 1.9.4
       '@eslint/js':
-        specifier: ^9.16
+        specifier: '9.16'
         version: 9.16.0
       '@tsconfig/strictest':
-        specifier: ^2.0
+        specifier: '2.0'
         version: 2.0.5
       '@types/eslint__eslintrc':
-        specifier: ^2.1
+        specifier: '2.1'
         version: 2.1.2
       '@types/eslint__js':
-        specifier: ^8.42
+        specifier: '8.42'
         version: 8.42.3
       '@types/node':
-        specifier: ^22.10
+        specifier: '22.10'
         version: 22.10.1
       '@vitest/coverage-v8':
-        specifier: ^2.1
+        specifier: '2.1'
         version: 2.1.8(vitest@2.1.8(@types/node@22.10.1))
       dependency-cruiser:
         specifier: latest
         version: 16.7.0
       esbuild:
-        specifier: ^0.24
+        specifier: '0.24'
         version: 0.24.0
       eslint:
-        specifier: ^9.16
+        specifier: '9.16'
         version: 9.16.0(jiti@1.21.6)
       eslint-plugin-eslint-plugin:
-        specifier: ^6.3
+        specifier: '6.3'
         version: 6.3.2(eslint@9.16.0(jiti@1.21.6))
       npm-parallel:
-        specifier: ^2.0
+        specifier: '2.0'
         version: 2.0.1
       repo-check:
-        specifier: ^1.40
+        specifier: '1.40'
         version: 1.40.0
       typescript:
-        specifier: ^5.7
+        specifier: '5.7'
         version: 5.7.2
       vitest:
-        specifier: ^2.1
+        specifier: '2.1'
         version: 2.1.8(@types/node@22.10.1)
       watchlist:
-        specifier: ^0.3
+        specifier: '0.3'
         version: 0.3.1
 
 packages:
