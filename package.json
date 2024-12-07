@@ -36,7 +36,7 @@
   },
   "files": [
     "configs",
-    "index.js",
+    "index.cjs",
     "rules",
     "src"
   ],
@@ -48,7 +48,7 @@
     "lint"
   ],
   "license": "MIT",
-  "main": "index.js",
+  "main": "index.cjs",
   "name": "eslint-plugin-shuunen",
   "peerDependencies": {
     "eslint": ">=8.57.0"

@@ -1,7 +1,7 @@
 import { expect, it } from 'vitest'
 
 const { capNesting } = require('./rules/utils/objects')
-const index = require('./index')
+const index = require('./index.cjs')
 
 it('index - check exported value', () => {
   const result = capNesting(index, 6)

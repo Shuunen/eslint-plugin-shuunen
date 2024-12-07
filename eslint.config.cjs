@@ -1,6 +1,6 @@
 'use strict'
 
-const shuunen = require('./index') // @ts-expect-error missing types
+const shuunen = require('./index.cjs') // @ts-expect-error missing types
 const plugin = require('eslint-plugin-eslint-plugin')
 
 module.exports = [

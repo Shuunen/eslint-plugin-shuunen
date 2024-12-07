@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-const { rules } = require('../../index')
+const { rules } = require('../../index.cjs')
 
 const title = 'tests executed in '
 

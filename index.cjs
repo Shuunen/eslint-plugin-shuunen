@@ -1,3 +1,5 @@
+'use strict'
+
 const browser = require('./configs/browser.js')
 const node = require('./configs/node.js')
 const base = require('./configs/base.js')
