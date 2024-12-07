@@ -66,7 +66,7 @@ const config = [
         },
         {
           format: ['PascalCase'],
-          prefix: ['is', 'has', 'are', 'can', 'should', 'did', 'will', 'use'],
+          prefix: ['is', 'has', 'are', 'can', 'should', 'did', 'will', 'use', 'show'],
           selector: ['variable', 'parameter', 'accessor'],
           types: ['boolean'],
         },
@@ -83,7 +83,7 @@ const config = [
               '^(allowfullscreen|allowFullScreen|async|autofocus|autoFocus|autoplay|autoPlay|checked|defaultChecked|contenteditable|contentEditable|controls|default|defer|disabled|draggable|formnovalidate|formNoValidate|hidden|inert|ismap|itemscope|itemScope|loop|multiple|muted|nomodule|noModule|novalidate|noValidate|open|playsinline|playsInline|readonly|readOnly|required|reversed|selected|spellcheck|spellCheck)$',
           },
           format: ['PascalCase'],
-          prefix: ['is', 'has', 'are', 'can', 'should', 'did', 'will', 'use'],
+          prefix: ['is', 'has', 'are', 'can', 'should', 'did', 'will', 'use', 'show'],
           selector: ['property'],
           types: ['boolean'],
         },
