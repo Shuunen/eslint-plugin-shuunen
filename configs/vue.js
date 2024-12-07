@@ -1,5 +1,4 @@
-// @ts-expect-error missing types
-const vue = require('eslint-plugin-vue').configs['flat/recommended']
+const vue = require('eslint-plugin-vue')
 const { shortName } = require('../src/constants.js')
 //
 // /^^         /^^
@@ -10,17 +9,17 @@ const { shortName } = require('../src/constants.js')
 //      /^^^^     /^^  /^^/^
 //       /^^        /^^/^^  /^^^^
 //
-const [, base, essential, stronglyRecommended, recommended] = vue
+const [, base, essential, stronglyRecommended, recommended] = vue.configs['flat/recommended']
 /** @type {import('eslint').Linter.Config[]} */
 const config = [
   {
     ...base,
     name: `${shortName}/vue`,
     rules: {
-      ...base.rules,
-      ...essential.rules,
-      ...stronglyRecommended.rules,
-      ...recommended.rules,
+      ...base?.rules,
+      ...essential?.rules,
+      ...stronglyRecommended?.rules,
+      ...recommended?.rules,
       'jsdoc/require-jsdoc': 'off', // annoying in vue files
       'vue/attributes-order': 'off', // styling, perfectionist does this
       'vue/first-attribute-linebreak': 'off', // styling

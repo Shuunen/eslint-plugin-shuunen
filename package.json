@@ -5,28 +5,28 @@
   "dependencies": {
     "@eslint/eslintrc": "3.2",
     "eslint-plugin-jsdoc": "50.6",
-    "eslint-plugin-perfectionist": "3.8",
+    "eslint-plugin-perfectionist": "4.2",
     "eslint-plugin-tailwindcss": "3.17",
-    "eslint-plugin-unicorn": "55.0",
-    "eslint-plugin-vue": "9.28",
-    "globals": "15.9",
-    "typescript-eslint": "8.12"
+    "eslint-plugin-unicorn": "56.0",
+    "eslint-plugin-vue": "9.32",
+    "globals": "15.13",
+    "typescript-eslint": "8.17"
   },
   "description": "My personal ESLint configs & rules",
   "devDependencies": {
     "@biomejs/biome": "1.9",
-    "@eslint/js": "9.14",
+    "@eslint/js": "9.16",
     "@tsconfig/strictest": "2.0",
     "@types/eslint__eslintrc": "2.1",
     "@types/eslint__js": "8.42",
-    "@types/node": "22",
+    "@types/node": "22.10",
     "@vitest/coverage-v8": "2.1",
     "dependency-cruiser": "latest",
     "esbuild": "0.24",
-    "eslint": "9.14",
+    "eslint": "9.16",
     "eslint-plugin-eslint-plugin": "6.3",
     "npm-parallel": "2.0",
-    "repo-check": "1.38",
+    "repo-check": "1.40",
     "typescript": "5.7",
     "vitest": "2.1",
     "watchlist": "0.3"
@@ -51,7 +51,7 @@
   "main": "index.cjs",
   "name": "eslint-plugin-shuunen",
   "peerDependencies": {
-    "eslint": ">=8.57.0"
+    "eslint": ">=9.10.0"
   },
   "private": false,
   "repository": {
@@ -63,7 +63,7 @@
     "check": "pnpm install && echo install success && pnpm build && repo-check && pnpm lint && pnpm test && echo check success",
     "lint": "pnpm lint:tsc && pnpm lint:biome && pnpm lint:eslint && pnpm lint:dep && echo lint success",
     "lint:biome": "biome check --error-on-warnings --write --unsafe && echo lint:biome success",
-    "lint:dep": "depcruise rules index.js --config && echo lint:dep success",
+    "lint:dep": "depcruise rules index.cjs --config && echo lint:dep success",
     "lint:eslint": "eslint --cache --max-warnings 0 . && echo lint:eslint success",
     "lint:tsc": "tsc --noEmit && echo lint:tsc success",
     "postversion": "git push && git push --tags && npm publish --registry https://registry.npmjs.org && echo publish success",
