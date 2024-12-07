@@ -96,3 +96,11 @@ module.exports = [
 - [V8](https://github.com/demurgos/v8-coverage) : simple & effective cli for code coverage
 - [Vitest](https://github.com/vitest-dev/vitest) : super fast vite-native testing framework
 - [Watchlist](https://github.com/lukeed/watchlist) : recursively watch a list of directories & run a command on any file system
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/Shuunen/eslint-plugin-shuunen.svg?variant=adaptive)](https://starchart.cc/Shuunen/eslint-plugin-shuunen)
+
+## Page views
+
+[![Free Website Counter](https://www.websitecounterfree.com/c.php?d=9&id=63928&s=12)](https://www.websitecounterfree.com)
