@@ -9,7 +9,7 @@
     "eslint-plugin-tailwindcss": "3.17",
     "eslint-plugin-unicorn": "56.0",
     "eslint-plugin-vue": "9.32",
-    "globals": "15.13",
+    "globals": "15.14",
     "typescript-eslint": "8.18"
   },
   "description": "My personal ESLint configs & rules",
