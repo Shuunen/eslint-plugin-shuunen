@@ -5,7 +5,7 @@
   "dependencies": {
     "@eslint/eslintrc": "3.2",
     "eslint-plugin-jsdoc": "50.6",
-    "eslint-plugin-perfectionist": "4.7",
+    "eslint-plugin-perfectionist": "4.8",
     "eslint-plugin-tailwindcss": "3.18",
     "eslint-plugin-unicorn": "56.0",
     "eslint-plugin-vue": "9.32",
