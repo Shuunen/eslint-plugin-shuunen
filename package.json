@@ -87,5 +87,5 @@
   "sideEffects": false,
   "types": "index.d.ts",
   "type": "module",
-  "version": "0.4.0"
+  "version": "1.0.0"
 }
