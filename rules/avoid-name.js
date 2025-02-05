@@ -1,5 +1,5 @@
 /** @type {import('eslint').Rule.RuleModule} */
-module.exports = {
+export default {
   create(context) {
     return {
       // biome-ignore lint/style/useNamingConvention: <explanation>

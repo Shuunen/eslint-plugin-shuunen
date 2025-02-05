@@ -1,15 +1,16 @@
 // @ts-expect-error missing types
-const perfectionist = require('eslint-plugin-perfectionist').configs['recommended-natural']
+import perfectionistPlugin from 'eslint-plugin-perfectionist'
+const perfectionistConfig = perfectionistPlugin.configs['recommended-natural']
 //
 // /=\        /=         |-                 |-
 // |=/ /=\ /= |= /=\ /=: |  = /=\ /=\ = /== |
 // |   \=  |  |  \=  \=: \= | \=/ | | | ==/ \=
 //
 /** @type {import('eslint').Linter.Config} */
-const config = {
-  ...perfectionist,
+export const perfectionist = {
+  ...perfectionistConfig,
   rules: {
-    ...perfectionist.rules,
+    ...perfectionistConfig.rules,
     'perfectionist/sort-classes': [
       'error',
       {
@@ -30,4 +31,3 @@ const config = {
     'perfectionist/sort-named-imports': 'off', // 🟨 not needed, vscode or biome does this
   },
 }
-module.exports = config

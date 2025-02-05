@@ -1,5 +1,5 @@
-const rule = require('./avoid-name')
-const { RuleTester } = require('eslint')
+import { RuleTester } from 'eslint'
+import rule from './avoid-name.js'
 
 const ruleTester = new RuleTester()
 

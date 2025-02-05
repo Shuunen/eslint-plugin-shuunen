@@ -2,7 +2,7 @@
  * @param {object | null} object
  * @param {number} maxLevel
  */
-function capNesting(object, maxLevel) {
+export function capNesting(object, maxLevel) {
   const one = 1
   /**
    * @param {object | null} currentObject
@@ -17,5 +17,3 @@ function capNesting(object, maxLevel) {
   }
   return capHelper(object, one)
 }
-
-module.exports = { capNesting }

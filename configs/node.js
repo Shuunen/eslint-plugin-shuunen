@@ -1,5 +1,5 @@
-const globals = require('globals')
-const { shortName } = require('../src/constants.js')
+import globals from 'globals'
+import { shortName } from '../src/constants.js'
 //
 // ooooo      ooo                 .o8
 // `888b.     `8'                "888
@@ -10,7 +10,7 @@ const { shortName } = require('../src/constants.js')
 // o8o        `8  `Y8bod8P' `Y8bod88P" `Y8bod8P'
 //
 /** @type {import('eslint').Linter.Config[]} */
-const config = [
+export const node = [
   {
     languageOptions: {
       globals: {
@@ -20,4 +20,3 @@ const config = [
     name: `${shortName}/node`,
   },
 ]
-module.exports = config

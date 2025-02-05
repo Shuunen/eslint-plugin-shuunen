@@ -1,5 +1,5 @@
-// @ts-expect-error missing types
-const { plugins, rules } = require('eslint-plugin-jsdoc').configs['flat/recommended']
+import jsdocPlugin from 'eslint-plugin-jsdoc'
+const { plugins, rules } = jsdocPlugin.configs['flat/recommended']
 //
 // MMMMMMMM""M MP""""""`MM M""""""'YMM
 // MMMMMMMM  M M  mmmmm..M M  mmmm. `M
@@ -9,8 +9,11 @@ const { plugins, rules } = require('eslint-plugin-jsdoc').configs['flat/recommen
 // MM.     .MM Mb.     .dM M       .MM `88888P' `88888P'
 // MMMMMMMMMMM MMMMMMMMMMM MMMMMMMMMMM
 //
+/* c8 ignore next 2 */
+if (plugins === undefined) throw new Error('failed to extract plugins from eslint-plugin-jsdoc')
+if (rules === undefined) throw new Error('failed to extract rules from eslint-plugin-jsdoc')
 /** @type {import('eslint').Linter.Config} */
-const config = {
+export const jsdoc = {
   plugins,
   rules: {
     ...rules,
@@ -34,4 +37,3 @@ const config = {
     ],
   },
 }
-module.exports = config

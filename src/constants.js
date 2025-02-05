@@ -1,3 +1,1 @@
-module.exports = {
-  shortName: 'shuunen',
-}
+export const shortName = 'shuunen'

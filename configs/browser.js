@@ -1,6 +1,6 @@
-const globals = require('globals')
-const { shortName } = require('../src/constants.js')
-const tailwind = require('./tailwind.js')
+import globals from 'globals'
+import { shortName } from '../src/constants.js'
+import { tailwind } from './tailwind.js'
 //     _____
 //  __|___  |__  _____   _____  __  __  __  ______  ______  _____
 // |      >    ||     | /     \|  \/  \|  ||   ___||   ___||     |
@@ -9,7 +9,7 @@ const tailwind = require('./tailwind.js')
 //   |_____|
 //
 /** @type {import('eslint').Linter.Config[]} */
-const config = [
+export const browser = [
   {
     languageOptions: {
       globals: {
@@ -20,4 +20,3 @@ const config = [
   },
   ...tailwind,
 ]
-module.exports = config

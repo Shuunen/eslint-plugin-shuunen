@@ -1,6 +1,7 @@
 // @ts-expect-error missing types
-const tailwind = require('eslint-plugin-tailwindcss').configs['flat/recommended']
-const { shortName } = require('../src/constants.js')
+import tailwindPlugin from 'eslint-plugin-tailwindcss'
+import { shortName } from '../src/constants.js'
+const tailwindConfig = tailwindPlugin.configs['flat/recommended']
 //
 // oOoOOoOOo            o                         o
 //     o            o  O           o             O
@@ -12,8 +13,8 @@ const { shortName } = require('../src/constants.js')
 //     o'    `OoO'o o' Oo  `Oo'oO' o'  o   O `OoO'o
 //
 /** @type {import('eslint').Linter.Config[]} */
-const config = [
-  ...tailwind,
+export const tailwind = [
+  ...tailwindConfig,
   {
     name: `${shortName}/browser/tailwind-settings`,
     settings: {
@@ -24,4 +25,3 @@ const config = [
     },
   },
 ]
-module.exports = config

@@ -1,5 +1,6 @@
-// @ts-expect-error missing types
-const { plugins, rules } = require('eslint-plugin-unicorn').configs['flat/all']
+import { configs } from 'eslint-plugin-unicorn'
+const { plugins, rules } = configs['flat/all']
+
 //
 // #     #
 // #     # #    # #  ####   ####  #####  #    #
@@ -9,8 +10,11 @@ const { plugins, rules } = require('eslint-plugin-unicorn').configs['flat/all']
 // #     # #   ## # #    # #    # #   #  #   ##
 //  #####  #    # #  ####   ####  #    # #    #
 //
+/* c8 ignore next 2 */
+if (plugins === undefined) throw new Error('failed to extract plugins from eslint-plugin-unicorn')
+if (rules === undefined) throw new Error('failed to extract rules from eslint-plugin-unicorn')
 /** @type {import('eslint').Linter.Config} */
-const config = {
+export const unicorn = {
   plugins,
   rules: {
     ...rules,
@@ -20,4 +24,3 @@ const config = {
     'unicorn/switch-case-braces': 'off', // 🟨 useless styling
   },
 }
-module.exports = config

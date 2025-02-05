@@ -1,5 +1,6 @@
-const tsEslint = require('typescript-eslint').configs.all
-const { shortName } = require('../src/constants.js')
+import { configs } from 'typescript-eslint'
+import { shortName } from '../src/constants.js'
+const tsEslint = configs.all
 //
 // ooooo                      .oPYo.               o          o
 //   8                        8                               8
@@ -12,13 +13,19 @@ const { shortName } = require('../src/constants.js')
 // ::::::::...::..:::::::::::::::::::::::::::::::::::..::::::::::
 //
 const [base, recommended, all] = tsEslint
+/* c8 ignore next 3 */
+if (base === undefined) throw new Error('failed to get base from typescript-eslint')
+if (recommended === undefined) throw new Error('failed to get recommended from typescript-eslint')
+if (all === undefined) throw new Error('failed to get all from typescript-eslint')
 /** @type {import('eslint').Linter.Config[]} */
-const config = [
+export const typescript = [
   {
     ...base,
     ...recommended,
     ...all,
+    // @ts-expect-error type issue
     files: [...recommended.files, '**/*.js', '**/*.cjs'],
+    // @ts-expect-error type issue
     languageOptions: {
       ...base.languageOptions,
       ...all.languageOptions,
@@ -129,4 +136,3 @@ const config = [
     },
   },
 ]
-module.exports = config

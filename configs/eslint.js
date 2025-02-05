@@ -1,5 +1,5 @@
-// @ts-expect-error missing types
-const { plugins, rules } = require('@eslint/js').configs.all
+import eslintPlugin from '@eslint/js'
+const { rules } = eslintPlugin.configs.all
 //
 // :::===== :::===  :::      ::: :::= === :::====
 // :::      :::     :::      ::: :::===== :::====
@@ -8,8 +8,7 @@ const { plugins, rules } = require('@eslint/js').configs.all
 // ======== ======  ======== === ===  ===   ===
 //
 /** @type {import('eslint').Linter.Config} */
-const config = {
-  plugins,
+export const eslint = {
   rules: {
     ...rules,
     'capitalized-comments': 'off', // 🟨 useless
@@ -46,4 +45,3 @@ const config = {
     'sort-keys': 'off', // 🔴 perfectionist does this
   },
 }
-module.exports = config

@@ -36,7 +36,7 @@
   },
   "files": [
     "configs",
-    "index.cjs",
+    "index.js",
     "rules",
     "src"
   ],
@@ -48,7 +48,13 @@
     "lint"
   ],
   "license": "MIT",
-  "main": "index.cjs",
+  "main": "index.js",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.cjs"
+    }
+  },
   "name": "eslint-plugin-shuunen",
   "peerDependencies": {
     "eslint": ">=9.10.0"
@@ -63,7 +69,7 @@
     "check": "pnpm install && echo install success && pnpm build && repo-check && pnpm lint && pnpm test && echo check success",
     "lint": "pnpm lint:tsc && pnpm lint:biome && pnpm lint:eslint && pnpm lint:dep && echo lint success",
     "lint:biome": "biome check --error-on-warnings --write --unsafe && echo lint:biome success",
-    "lint:dep": "depcruise rules index.cjs --config && echo lint:dep success",
+    "lint:dep": "depcruise rules index.js --config && echo lint:dep success",
     "lint:eslint": "eslint --cache --max-warnings 0 . && echo lint:eslint success",
     "lint:tsc": "tsc --noEmit && echo lint:tsc success",
     "postversion": "git push && git push --tags && npm publish --registry https://registry.npmjs.org && echo publish success",
@@ -80,5 +86,6 @@
   },
   "sideEffects": false,
   "types": "index.d.ts",
+  "type": "module",
   "version": "0.4.0"
 }
