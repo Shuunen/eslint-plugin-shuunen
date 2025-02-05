@@ -14,4 +14,4 @@ export type Plugin = ESLint.Plugin & { configs: Configs }
 /* c8 ignore start */
 declare const eslintPluginShuunen: Plugin
 
-export = eslintPluginShuunen
+export default eslintPluginShuunen
