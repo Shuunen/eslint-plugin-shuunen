@@ -65,7 +65,6 @@
     "lint:biome": "biome check --error-on-warnings --write --unsafe && echo lint:biome success",
     "lint:dep": "depcruise rules index.cjs --config && echo lint:dep success",
     "lint:eslint": "eslint --cache --max-warnings 0 . && echo lint:eslint success",
-    "lint:eslint:inspect": "eslint --inspect-config",
     "lint:tsc": "tsc --noEmit && echo lint:tsc success",
     "postversion": "git push && git push --tags && npm publish --registry https://registry.npmjs.org && echo publish success",
     "preversion": "pnpm check",
