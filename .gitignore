@@ -1,5 +1,7 @@
 .eslintcache
 *.log
 *.sample.*
+*.tgz
 coverage
+dist
 node_modules

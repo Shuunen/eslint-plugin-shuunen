@@ -1,9 +1,8 @@
-'use strict'
+// @ts-expect-error missing types
+import plugin from 'eslint-plugin-eslint-plugin'
+import shuunen from './index.js'
 
-const shuunen = require('./index.cjs') // @ts-expect-error missing types
-const plugin = require('eslint-plugin-eslint-plugin')
-
-module.exports = [
+export default [
   ...shuunen.configs.base,
   ...shuunen.configs.node,
   {
@@ -20,6 +19,7 @@ module.exports = [
   plugin.configs['flat/all'],
   {
     rules: {
+      'eslint-plugin/meta-property-ordering': 'off', // conflicting with perfectionist
       'eslint-plugin/require-meta-docs-url': 'off', // I have no docs yet
     },
   },

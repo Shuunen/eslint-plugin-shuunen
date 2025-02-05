@@ -1,6 +1,8 @@
+/* c8 ignore start */
 /* eslint-disable no-console */
-const { rules } = require('../../index.cjs')
+import { loadRules } from './load-rules.js'
 
+const rules = await loadRules()
 const title = 'tests executed in '
 
 const main = async () => {

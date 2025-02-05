@@ -38,6 +38,8 @@ export default [                    // 🥗 compose your salad
 
 ## CommonJS (legacy)
 
+Last working version with CommonJS is `0.4.0`.
+
 In your `eslint.config.cjs` :
 
 ```js

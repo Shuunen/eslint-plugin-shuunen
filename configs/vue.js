@@ -1,5 +1,5 @@
-const vue = require('eslint-plugin-vue')
-const { shortName } = require('../src/constants.js')
+import vuePlugin from 'eslint-plugin-vue'
+import { shortName } from '../src/constants.js'
 //
 // /^^         /^^
 //  /^^       /^^
@@ -9,9 +9,9 @@ const { shortName } = require('../src/constants.js')
 //      /^^^^     /^^  /^^/^
 //       /^^        /^^/^^  /^^^^
 //
-const [, base, essential, stronglyRecommended, recommended] = vue.configs['flat/recommended']
+const [, base, essential, stronglyRecommended, recommended] = vuePlugin.configs['flat/recommended']
 /** @type {import('eslint').Linter.Config[]} */
-const config = [
+export const vue = [
   {
     ...base,
     name: `${shortName}/vue`,
@@ -31,4 +31,3 @@ const config = [
     },
   },
 ]
-module.exports = config

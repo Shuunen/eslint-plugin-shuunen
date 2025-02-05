@@ -1,3 +1,4 @@
+/* c8 ignore start */
 // @ts-nocheck
 //
 // 8888ba.88ba               888888ba           dP
@@ -9,8 +10,9 @@
 // oooooooooooooo~~~~.88~oooooooooooooooooooooooooooooooooooooooooooo
 //               d8888P
 
-const path = require('node:path')
-const fs = require('node:fs')
+import fs from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 
 const isIterable = object => typeof object?.[Symbol.iterator] === 'function'
 
@@ -110,37 +112,35 @@ function reportProblems(create) {
   return wrapped
 }
 
-/** @returns {import('eslint').Rule.RuleModule} */
-function loadRule(ruleId) {
-  const rule = require(`../${ruleId}`)
+/** @returns {Promise<import('eslint').Rule.RuleModule>} */
+export async function loadRule(ruleId) {
+  const rule = await import(`../${ruleId}.js`)
 
   return {
-    create: reportProblems(rule.create),
+    create: reportProblems(rule.default.create),
     meta: {
       // If there is are, options add `[]` so ESLint can validate that no data is passed to the rule.
       // https://github.com/not-an-aardvark/eslint-plugin-eslint-plugin/blob/master/docs/rules/require-meta-schema.md
       schema: [],
-      ...rule.meta,
+      ...rule.default.meta,
       docs: {
-        ...rule.meta.docs,
+        ...rule.default.meta.docs,
       },
     },
   }
 }
 
-function loadRules() {
-  return Object.fromEntries(
-    fs
-      .readdirSync(path.join(__dirname, '..'), { withFileTypes: true })
-      .filter(file => file.isFile() && !file.name.includes('.test.'))
-      .map(file => {
-        const ruleId = path.basename(file.name, '.js')
-        return [ruleId, loadRule(ruleId)]
-      }),
-  )
-}
+const currentDirectory = path.dirname(fileURLToPath(import.meta.url))
 
-module.exports = {
-  loadRule,
-  loadRules,
+export async function loadRules() {
+  const files = fs.readdirSync(path.join(currentDirectory, '..'), { withFileTypes: true }).filter(file => file.isFile() && !file.name.includes('.test.'))
+
+  const entries = await Promise.all(
+    files.map(async file => {
+      const ruleId = path.basename(file.name, '.js')
+      return [ruleId, await loadRule(ruleId)]
+    }),
+  )
+
+  return Object.fromEntries(entries)
 }

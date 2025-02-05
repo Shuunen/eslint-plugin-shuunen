@@ -1,10 +1,10 @@
-const { shortName } = require('../src/constants.js')
-const unicorn = require('./unicorn.js')
-const perfectionist = require('./perfectionist.js')
-const eslint = require('./eslint.js')
-const jsdoc = require('./jsdoc.js')
-const { ignores } = require('../src/ignores.js')
-const { myRules, shuunen } = require('./shuunen.js')
+import { shortName } from '../src/constants.js'
+import { ignores } from '../src/ignores.js'
+import { eslint } from './eslint.js'
+import { jsdoc } from './jsdoc.js'
+import { perfectionist } from './perfectionist.js'
+import { myRules, shuunen } from './shuunen.js'
+import { unicorn } from './unicorn.js'
 //
 //     dBBBBb dBBBBb  .dBUBBA   dBEDS
 //       dBP      BB  BP
@@ -13,7 +13,7 @@ const { myRules, shuunen } = require('./shuunen.js')
 // adcBBQ'  dBBBBBBBdBEBOP' dBUBBA
 //
 /** @type {import('eslint').Linter.Config[]} */
-const config = [
+export const base = [
   {
     ignores,
     name: `${shortName}/base/ignores`,
@@ -28,7 +28,6 @@ const config = [
       ...jsdoc.plugins,
       shuunen,
     },
-    // @ts-expect-error unknown type issue
     rules: {
       ...eslint.rules,
       ...perfectionist.rules,
@@ -48,4 +47,3 @@ const config = [
     },
   },
 ]
-module.exports = config
