@@ -36,7 +36,9 @@
   },
   "files": [
     "configs",
+    "index.cjs",
     "index.js",
+    "index.d.ts",
     "rules",
     "src"
   ],
