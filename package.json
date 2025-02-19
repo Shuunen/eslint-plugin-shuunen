@@ -7,7 +7,7 @@
     "eslint-plugin-jsdoc": "50.6",
     "eslint-plugin-perfectionist": "4.9",
     "eslint-plugin-tailwindcss": "3.18",
-    "eslint-plugin-unicorn": "56.0",
+    "eslint-plugin-unicorn": "57.0",
     "eslint-plugin-vue": "9.32",
     "globals": "15.15",
     "typescript-eslint": "8.24"

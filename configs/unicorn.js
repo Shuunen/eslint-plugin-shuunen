@@ -1,5 +1,5 @@
-import { configs } from 'eslint-plugin-unicorn'
-const { plugins, rules } = configs['flat/all']
+import plugin from 'eslint-plugin-unicorn'
+const { plugins, rules } = plugin.configs.all
 
 //
 // #     #
