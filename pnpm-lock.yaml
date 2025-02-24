@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  tinypool: '0.8'
+  tinypool: '0.9'
 
 importers:
 
@@ -1804,9 +1804,9 @@ packages:
   tinyexec@0.3.2:
     resolution: {integrity: sha512-KQQR9yN7R5+OSwaK0XQoj22pwHoTlgYqmUscPYoknOoWCWfj/5/ABTMRi69FrKU5ffPVh5QcFikpWJI/P1ocHA==}
 
-  tinypool@0.8.0:
-    resolution: {integrity: sha512-BkMhpw8M8y9+XBOEP57Wzbw/8IoJYtL1OvFjX+88IvwzAqVhwEV2TID0lZ1l4b5dPhjzSFQrhWdD2CLWt+oXRw==}
-    engines: {node: '>=14.0.0'}
+  tinypool@0.9.0:
+    resolution: {integrity: sha512-/aMLccuigz3ZZV8pv/LvOVkOzOfcKkz0V2d5JfHhXUSlp0JJ8h2lAjveUZFTKqII9L4iJh4jod5bfZxx3mditw==}
+    engines: {node: ^18.0.0 || >=20.0.0}
 
   tinyrainbow@2.0.0:
     resolution: {integrity: sha512-op4nsTR47R6p0vMUUoYl/a+ljLFVtlfaXkLQmqfLR1qHma1h/ysYk4hEXZ880bf2CYgTskvTa/e196Vd5dDQXw==}
@@ -3624,7 +3624,7 @@ snapshots:
 
   tinyexec@0.3.2: {}
 
-  tinypool@0.8.0: {}
+  tinypool@0.9.0: {}
 
   tinyrainbow@2.0.0: {}
 
@@ -3745,7 +3745,7 @@ snapshots:
       std-env: 3.8.0
       tinybench: 2.9.0
       tinyexec: 0.3.2
-      tinypool: 0.8.0
+      tinypool: 0.9.0
       tinyrainbow: 2.0.0
       vite: 6.1.1(@types/node@22.13.5)(jiti@1.21.7)(yaml@2.7.0)
       vite-node: 3.0.6(@types/node@22.13.5)(jiti@1.21.7)(yaml@2.7.0)
