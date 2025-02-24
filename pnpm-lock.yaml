@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  tinypool: 0.8.0
+  tinypool: '0.8'
 
 importers:
 
@@ -48,9 +48,6 @@ importers:
       '@types/eslint__eslintrc':
         specifier: '2.1'
         version: 2.1.2
-      '@types/eslint__js':
-        specifier: '8.42'
-        version: 8.42.3
       '@types/node':
         specifier: '22.13'
         version: 22.13.5
@@ -680,9 +677,6 @@ packages:
 
   '@types/eslint__eslintrc@2.1.2':
     resolution: {integrity: sha512-qXvzPFY7Rz05xD8ZApXJ3S8xStQD2Ibzu3EFIF0UMNOAfLY5xUu3H61q0JrHo2OXD6rcFG75yUxNQbkKtFKBSw==}
-
-  '@types/eslint__js@8.42.3':
-    resolution: {integrity: sha512-alfG737uhmPdnvkrLdZLcEKJ/B8s9Y4hrZ+YAdzUeoArBlSUERA2E87ROfOaS4jd/C45fzOoZzidLc1IPwLqOw==}
 
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
@@ -2402,10 +2396,6 @@ snapshots:
       '@types/json-schema': 7.0.15
 
   '@types/eslint__eslintrc@2.1.2':
-    dependencies:
-      '@types/eslint': 9.6.1
-
-  '@types/eslint__js@8.42.3':
     dependencies:
       '@types/eslint': 9.6.1
 
