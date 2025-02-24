@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  tinypool: 0.8.0
+
 importers:
 
   .:
@@ -70,8 +73,8 @@ importers:
         specifier: '2.0'
         version: 2.0.1
       repo-check:
-        specifier: '1.40'
-        version: 1.40.0
+        specifier: '1.42'
+        version: 1.42.0
       typescript:
         specifier: '5.7'
         version: 5.7.3
@@ -1639,8 +1642,8 @@ packages:
     resolution: {integrity: sha512-cnE+y8bz4NhMjISKbgeVJtqNbtf5QpjZP+Bslo+UqkIt9QPnX9q095eiRRASJG1/tz6dlNr6Z5NsBiWYokp6EQ==}
     hasBin: true
 
-  repo-check@1.40.0:
-    resolution: {integrity: sha512-EO5AKEYlUU8cRDq/9PVEkTsQ19371lCdw38KTHVWH48Nxq7kS6uJXYEHBii/AQ0kXRVxJP57uMi84lGH5zNRZQ==}
+  repo-check@1.42.0:
+    resolution: {integrity: sha512-AsmKM/MNM26fjJPqob8oMw+7m28/pLUMpH8u05AF1yHLOeW2S1+Hhx6iPSN1T3XBOsO0d7ol1WgCcVF75ZjTYA==}
     hasBin: true
 
   require-from-string@2.0.2:
@@ -1684,8 +1687,8 @@ packages:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
 
-  shuutils@10.1.0:
-    resolution: {integrity: sha512-Q+8PaUIik4W3bEE2xtDMZvYC7y4B8mnh3x7cneXPJmry0esVRir+hSZHh5Kjh6rtV0pYj+eKtAXBxJ8LDqPZhA==}
+  shuutils@10.5.0:
+    resolution: {integrity: sha512-XIBlpWI8zIRYV1f1hdIApAPtsThzqBkIoLfBpmbQY+RVTwDn3mtfJ/ir3ifhdsnoQjcDKkcdiJGdnoLje/KU3w==}
     hasBin: true
 
   siginfo@2.0.0:
@@ -1807,9 +1810,9 @@ packages:
   tinyexec@0.3.2:
     resolution: {integrity: sha512-KQQR9yN7R5+OSwaK0XQoj22pwHoTlgYqmUscPYoknOoWCWfj/5/ABTMRi69FrKU5ffPVh5QcFikpWJI/P1ocHA==}
 
-  tinypool@1.0.2:
-    resolution: {integrity: sha512-al6n+QEANGFOMf/dmUMsuS5/r9B06uwlyNjZZql/zv8J7ybHCgoihBNORZCY2mzUuAnomQa2JdhyHKzZxPCrFA==}
-    engines: {node: ^18.0.0 || >=20.0.0}
+  tinypool@0.8.0:
+    resolution: {integrity: sha512-BkMhpw8M8y9+XBOEP57Wzbw/8IoJYtL1OvFjX+88IvwzAqVhwEV2TID0lZ1l4b5dPhjzSFQrhWdD2CLWt+oXRw==}
+    engines: {node: '>=14.0.0'}
 
   tinyrainbow@2.0.0:
     resolution: {integrity: sha512-op4nsTR47R6p0vMUUoYl/a+ljLFVtlfaXkLQmqfLR1qHma1h/ysYk4hEXZ880bf2CYgTskvTa/e196Vd5dDQXw==}
@@ -3426,10 +3429,10 @@ snapshots:
     dependencies:
       jsesc: 3.0.2
 
-  repo-check@1.40.0:
+  repo-check@1.42.0:
     dependencies:
       arg: 5.0.2
-      shuutils: 10.1.0
+      shuutils: 10.5.0
       sort-json: 2.0.1
 
   require-from-string@2.0.2: {}
@@ -3485,7 +3488,7 @@ snapshots:
 
   shebang-regex@3.0.0: {}
 
-  shuutils@10.1.0:
+  shuutils@10.5.0:
     dependencies:
       tiny-glob: 0.2.9
 
@@ -3631,7 +3634,7 @@ snapshots:
 
   tinyexec@0.3.2: {}
 
-  tinypool@1.0.2: {}
+  tinypool@0.8.0: {}
 
   tinyrainbow@2.0.0: {}
 
@@ -3752,7 +3755,7 @@ snapshots:
       std-env: 3.8.0
       tinybench: 2.9.0
       tinyexec: 0.3.2
-      tinypool: 1.0.2
+      tinypool: 0.8.0
       tinyrainbow: 2.0.0
       vite: 6.1.1(@types/node@22.13.5)(jiti@1.21.7)(yaml@2.7.0)
       vite-node: 3.0.6(@types/node@22.13.5)(jiti@1.21.7)(yaml@2.7.0)

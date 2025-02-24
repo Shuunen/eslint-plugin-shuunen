@@ -26,13 +26,19 @@
     "eslint": "9.21",
     "eslint-plugin-eslint-plugin": "6.4",
     "npm-parallel": "2.0",
-    "repo-check": "1.40",
+    "repo-check": "1.42",
     "typescript": "5.7",
     "vitest": "3.0",
     "watchlist": "0.3"
   },
   "engines": {
     "node": ">=20"
+  },
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.cjs"
+    }
   },
   "files": [
     "configs",
@@ -51,15 +57,14 @@
   ],
   "license": "MIT",
   "main": "index.js",
-  "exports": {
-    ".": {
-      "import": "./index.js",
-      "require": "./index.cjs"
-    }
-  },
   "name": "eslint-plugin-shuunen",
   "peerDependencies": {
-    "eslint": ">=9.10.0"
+    "eslint": ">=9.21.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "tinypool": "0.8.0"
+    }
   },
   "private": false,
   "repository": {
@@ -87,7 +92,7 @@
     "test:watch:old": "watchlist src -eager -- npm test"
   },
   "sideEffects": false,
-  "types": "index.d.ts",
   "type": "module",
+  "types": "index.d.ts",
   "version": "1.0.2"
 }
