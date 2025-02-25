@@ -62,7 +62,7 @@
   },
   "pnpm": {
     "overrides": {
-      "tinypool": "1.0"
+      "tinypool": "0.8"
     }
   },
   "private": false,
