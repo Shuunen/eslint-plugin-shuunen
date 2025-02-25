@@ -25,14 +25,16 @@ pnpm install -D eslint-plugin-shuunen
 In your `eslint.config.js` :
 
 ```js
-import shuunen from 'eslint-plugin-shuunen'
+import { base } from 'eslint-plugin-shuunen/configs/base'
+// import { browser } from 'eslint-plugin-shuunen/configs/browser'
+// same pattern for the other configs
 
-export default [                    // 🥗 compose your salad
-  ...shuunen.configs.base,          // 🥚 eslint/all + unicorn/all + perfectionist/natural + jsdoc
-  // ...shuunen.configs.browser,    // 🥑 globals for browser
-  // ...shuunen.configs.node,       // 🥕 globals for node
-  // ...shuunen.configs.typescript, // 🍅 typescript/all
-  // ...shuunen.configs.vue,        // 🥔 vue/recommended
+export default [    // 🥗 compose your salad
+  ...base,          // 🥚 eslint/all + unicorn/all + perfectionist/natural + jsdoc
+  // ...browser,    // 🥑 globals for browser
+  // ...node,       // 🥕 globals for node
+  // ...typescript, // 🍅 typescript/all
+  // ...vue,        // 🥔 vue essential + stronglyRecommended + recommended
 ]
 ```
 

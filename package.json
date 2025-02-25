@@ -37,6 +37,21 @@
     ".": {
       "import": "./index.js",
       "require": "./index.cjs"
+    },
+    "./configs/base": {
+      "import": "./configs/base.js"
+    },
+    "./configs/browser": {
+      "import": "./configs/browser.js"
+    },
+    "./configs/node": {
+      "import": "./configs/node.js"
+    },
+    "./configs/typescript": {
+      "import": "./configs/typescript.js"
+    },
+    "./configs/vue": {
+      "import": "./configs/vue.js"
     }
   },
   "files": [
