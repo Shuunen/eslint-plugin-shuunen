@@ -3,7 +3,6 @@
   "author": "Romain Racamier-Lafon <romain.racamier@gmail.com>",
   "bugs": "https://github.com/Shuunen/eslint-plugin-shuunen/issues",
   "dependencies": {
-    "@eslint/eslintrc": "3.3",
     "eslint-plugin-jsdoc": "50.6",
     "eslint-plugin-perfectionist": "4.9",
     "eslint-plugin-tailwindcss": "3.18",
@@ -17,13 +16,12 @@
     "@biomejs/biome": "1.9",
     "@eslint/js": "9.21",
     "@tsconfig/strictest": "2.0",
-    "@types/eslint__eslintrc": "2.1",
     "@types/node": "22.13",
     "@vitest/coverage-v8": "3.0",
     "dependency-cruiser": "latest",
-    "esbuild": "0.25",
     "eslint": "9.21",
     "eslint-plugin-eslint-plugin": "6.4",
+    "knip": "latest",
     "npm-parallel": "2.0",
     "repo-check": "1.42",
     "typescript": "5.7",
@@ -77,7 +75,7 @@
   },
   "pnpm": {
     "overrides": {
-      "tinypool": "0.8"
+      "tinypool": "0.8.0"
     }
   },
   "private": false,
@@ -88,14 +86,15 @@
   "scripts": {
     "build": "echo no build task is needed && echo build success",
     "check": "pnpm install && echo install success && pnpm build && repo-check && pnpm lint && pnpm test && echo check success",
-    "lint": "pnpm lint:tsc && pnpm lint:biome && pnpm lint:eslint && pnpm lint:dep && echo lint success",
+    "lint": "pnpm lint:tsc && pnpm lint:biome && pnpm lint:knip && pnpm lint:eslint && pnpm lint:dep && echo lint success",
     "lint:biome": "biome check --error-on-warnings --write --unsafe && echo lint:biome success",
     "lint:dep": "depcruise rules index.js --config && echo lint:dep success",
     "lint:eslint": "eslint --cache --max-warnings 0 . && echo lint:eslint success",
+    "lint:knip": "knip",
     "lint:tsc": "tsc --noEmit && echo lint:tsc success",
     "postversion": "git push && git push --tags && npm publish --registry https://registry.npmjs.org && echo publish success",
     "preversion": "pnpm check",
-    "start": "pnpm dev",
+    "start": "node .",
     "test": "vitest --coverage --run && pnpm test:rules && echo test success",
     "test:bench": "vitest bench && echo test bench success",
     "test:rules": "node rules/utils/run-tests.js && echo test:rules success",

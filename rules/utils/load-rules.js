@@ -113,7 +113,7 @@ function reportProblems(create) {
 }
 
 /** @returns {Promise<import('eslint').Rule.RuleModule>} */
-export async function loadRule(ruleId) {
+async function loadRule(ruleId) {
   const rule = await import(`../${ruleId}.js`)
 
   return {
