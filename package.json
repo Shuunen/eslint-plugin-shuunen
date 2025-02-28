@@ -24,7 +24,7 @@
     "knip": "latest",
     "npm-parallel": "2.0",
     "repo-check": "1.42",
-    "typescript": "5.7",
+    "typescript": "5.8",
     "vitest": "3.0",
     "watchlist": "0.3"
   },
