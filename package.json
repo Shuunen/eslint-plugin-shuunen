@@ -9,7 +9,7 @@
     "eslint-plugin-unicorn": "57.0",
     "eslint-plugin-vue": "9.32",
     "globals": "16.0",
-    "typescript-eslint": "8.25"
+    "typescript-eslint": "8.26"
   },
   "description": "My personal ESLint configs & rules",
   "devDependencies": {
