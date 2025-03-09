@@ -90,7 +90,6 @@ module.exports = [
 
 - [Anthony Fu](https://github.com/antfu/eslint-config) : for his config, for the inspiration
 - [Dependency-cruiser](https://github.com/sverweij/dependency-cruiser) : handy tool to validate and visualize dependencies
-- [Esbuild](https://github.com/evanw/esbuild) : an extremely fast JavaScript bundler and minifier
 - [Eslint](https://eslint.org) : super tool to find & fix problems
 - [Github](https://github.com) : for all their great work year after year, pushing OSS forward
 - [Npm-parallel](https://github.com/spion/npm-parallel) : to keep my npm scripts clean & readable
