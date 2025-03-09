@@ -16,16 +16,14 @@
     "@biomejs/biome": "1.9",
     "@eslint/js": "9.22",
     "@tsconfig/strictest": "2.0",
+    "@types/bun": "latest",
     "@types/node": "22.13",
-    "@vitest/coverage-v8": "3.0",
-    "dependency-cruiser": "latest",
     "eslint": "9.22",
     "eslint-plugin-eslint-plugin": "6.4",
     "knip": "latest",
     "npm-parallel": "2.0",
     "repo-check": "1.42",
     "typescript": "5.8",
-    "vitest": "3.0",
     "watchlist": "0.3"
   },
   "engines": {
@@ -71,12 +69,7 @@
   "main": "index.js",
   "name": "eslint-plugin-shuunen",
   "peerDependencies": {
-    "eslint": ">=9.21.0"
-  },
-  "pnpm": {
-    "overrides": {
-      "tinypool": "0.8.0"
-    }
+    "eslint": ">=9.22"
   },
   "private": false,
   "repository": {
@@ -85,23 +78,21 @@
   },
   "scripts": {
     "build": "echo no build task is needed && echo build success",
-    "check": "pnpm install && echo install success && pnpm build && repo-check && pnpm lint && pnpm test && echo check success",
-    "lint": "pnpm lint:tsc && pnpm lint:biome && pnpm lint:knip && pnpm lint:eslint && pnpm lint:dep && echo lint success",
+    "check": "bun install && echo install success && bun run build && repo-check && bun lint && bun test && echo check success",
+    "lint": "bun lint:tsc && bun lint:biome && bun lint:knip && bun lint:eslint && echo lint success",
     "lint:biome": "biome check --error-on-warnings --write --unsafe && echo lint:biome success",
-    "lint:dep": "depcruise rules index.js --config && echo lint:dep success",
     "lint:eslint": "eslint --cache --max-warnings 0 . && echo lint:eslint success",
     "lint:knip": "knip",
     "lint:tsc": "tsc --noEmit && echo lint:tsc success",
     "postversion": "git push && git push --tags && npm publish --registry https://registry.npmjs.org && echo publish success",
-    "preversion": "pnpm check",
+    "preversion": "bun check",
     "start": "node .",
-    "test": "vitest --coverage --run && pnpm test:rules && echo test success",
-    "test:bench": "vitest bench && echo test bench success",
+    "test": "bun test --coverage && bun test:rules && echo test success",
+    "test:bun:watch": "bun test --coverage --watch",
     "test:rules": "node rules/utils/run-tests.js && echo test:rules success",
-    "test:rules:watch": "watchlist rules -eager -- pnpm test:rules",
-    "test:update": "vitest --run --update && echo test update success",
-    "test:vitest:watch": "vitest --coverage",
-    "test:watch": "parallel test:vitest:watch test:rules:watch",
+    "test:rules:watch": "watchlist rules -eager -- bun test:rules",
+    "test:update": "bun test --coverage --update-snapshots && echo test update success",
+    "test:watch": "parallel test:bun:watch test:rules:watch",
     "test:watch:old": "watchlist src -eager -- npm test"
   },
   "sideEffects": false,

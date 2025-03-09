@@ -81,6 +81,7 @@ module.exports = [
 - [ ] merge typescript into base because it works on js ^^
 - [ ] search interesting plugins from [eslint-plugin-antfu](https://github.com/antfu/eslint-config)
 - [ ] search interesting plugins from [eslint-plugin-hardcore](https://github.com/EvgenyOrekhov/eslint-config-hardcore)
+- [ ] when available, add bun coverage line exclusions and enable 100% thresholds to ensure coverage is not decreasing
 - [ ] test to build a index.min.js file and see how it impact :
   - [ ] the install size
   - [ ] the performance
@@ -89,15 +90,12 @@ module.exports = [
 ## Thanks
 
 - [Anthony Fu](https://github.com/antfu/eslint-config) : for his config, for the inspiration
-- [Dependency-cruiser](https://github.com/sverweij/dependency-cruiser) : handy tool to validate and visualize dependencies
 - [Eslint](https://eslint.org) : super tool to find & fix problems
 - [Github](https://github.com) : for all their great work year after year, pushing OSS forward
 - [Npm-parallel](https://github.com/spion/npm-parallel) : to keep my npm scripts clean & readable
 - [Repo-checker](https://github.com/Shuunen/repo-checker) : eslint cover /src code and this tool the rest ^^
 - [Shields.io](https://shields.io) : for the nice badges on top of this readme
 - [Sindre Sorhus](https://github.com/sindresorhus/eslint-plugin-unicorn) : for his awesome eslint-plugin-unicorn, for the inspiration
-- [V8](https://github.com/demurgos/v8-coverage) : simple & effective cli for code coverage
-- [Vitest](https://github.com/vitest-dev/vitest) : super fast vite-native testing framework
 - [Watchlist](https://github.com/lukeed/watchlist) : recursively watch a list of directories & run a command on any file system
 
 ## Stargazers over time

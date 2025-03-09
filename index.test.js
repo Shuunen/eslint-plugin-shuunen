@@ -1,4 +1,4 @@
-import { expect, it } from 'vitest'
+import { expect, it } from 'bun:test'
 import { capNesting } from './rules/utils/objects.js'
 
 it('index - check exported value', async () => {

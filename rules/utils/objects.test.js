@@ -1,6 +1,6 @@
 /* eslint-disable unicorn/no-null */
 /* eslint-disable id-length */
-import { expect, it } from 'vitest'
+import { expect, it } from 'bun:test'
 import { capNesting } from './objects'
 
 const maxLevel = 3
