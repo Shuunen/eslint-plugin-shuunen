@@ -35,6 +35,10 @@ export const eslint = {
         message: "Don't specify return type on function",
         selector: 'FunctionExpression[returnType]',
       },
+      {
+        message: 'Throw statements are not allowed, use Result pattern or something else',
+        selector: 'ThrowStatement',
+      },
     ],
     'no-ternary': 'off', // 🟨 well written ternaries are fine
     'no-undefined': 'off', // 🟨 rule is understandable but seems too annoying

@@ -13,9 +13,12 @@ const tsEslint = configs.all
 // ::::::::...::..:::::::::::::::::::::::::::::::::::..::::::::::
 //
 const [base, recommended, all] = tsEslint
-/* c8 ignore next 3 */
+/* c8 ignore next 7 */
+// eslint-disable-next-line no-restricted-syntax
 if (base === undefined) throw new Error('failed to get base from typescript-eslint')
+// eslint-disable-next-line no-restricted-syntax
 if (recommended === undefined) throw new Error('failed to get recommended from typescript-eslint')
+// eslint-disable-next-line no-restricted-syntax
 if (all === undefined) throw new Error('failed to get all from typescript-eslint')
 /** @type {import('eslint').Linter.Config[]} */
 export const typescript = [

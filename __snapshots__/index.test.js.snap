@@ -268,6 +268,7 @@ exports[`index - check exported value 1`] = `
             "...",
             "...",
             "...",
+            "...",
           ],
           "no-return-assign": "error",
           "no-script-url": "error",

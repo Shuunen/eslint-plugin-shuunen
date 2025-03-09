@@ -21,6 +21,7 @@ class FixAbortError extends Error {}
 
 const fixOptions = {
   abort() {
+    // eslint-disable-next-line no-restricted-syntax
     throw new FixAbortError('Fix aborted.')
   },
 }
@@ -35,7 +36,8 @@ function wrapFixFunction(fix) {
       } catch (error) {
         // eslint-disable-next-line consistent-return
         if (error instanceof FixAbortError) return
-        /* c8 ignore next */
+        /* c8 ignore next 2 */
+        // eslint-disable-next-line no-restricted-syntax
         throw error
       }
     return result
