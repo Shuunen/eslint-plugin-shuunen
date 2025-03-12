@@ -23,6 +23,14 @@ export const unicorn = {
     'unicorn/prefer-spread': 'off', // 🔴 not thanks
     'unicorn/prefer-string-replace-all': 'off', // 🔴 not well supported
     'unicorn/prefer-switch': 'off', // 🔴 not thanks
+    'unicorn/prevent-abbreviations': [
+      'error',
+      {
+        allowList: {
+          utils: true,
+        },
+      },
+    ],
     'unicorn/switch-case-braces': 'off', // 🟨 useless styling
   },
 }
