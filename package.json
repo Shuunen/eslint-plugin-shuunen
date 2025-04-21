@@ -4,7 +4,7 @@
   "bugs": "https://github.com/Shuunen/eslint-plugin-shuunen/issues",
   "dependencies": {
     "eslint-plugin-jsdoc": "50.6",
-    "eslint-plugin-perfectionist": "4.10",
+    "eslint-plugin-perfectionist": "4.12",
     "eslint-plugin-tailwindcss": "3.18",
     "eslint-plugin-unicorn": "58.0",
     "eslint-plugin-vue": "10.0",
