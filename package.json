@@ -20,9 +20,9 @@
     "@types/node": "22.15",
     "eslint": "9.26",
     "eslint-plugin-eslint-plugin": "6.4",
-    "knip": "latest",
+    "knip": "5.53",
     "npm-parallel": "2.0",
-    "repo-check": "1.42",
+    "repo-check": "1.43",
     "typescript": "5.8",
     "watchlist": "0.3"
   },
@@ -92,8 +92,7 @@
     "test:rules": "node rules/utils/run-tests.js && echo test:rules success",
     "test:rules:watch": "watchlist rules -eager -- bun test:rules",
     "test:update": "bun test --coverage --update-snapshots && echo test update success",
-    "test:watch": "parallel test:bun:watch test:rules:watch",
-    "test:watch:old": "watchlist src -eager -- npm test"
+    "test:watch": "parallel test:bun:watch test:rules:watch"
   },
   "sideEffects": false,
   "type": "module",
