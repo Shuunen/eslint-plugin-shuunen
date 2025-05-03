@@ -12,7 +12,6 @@
 
 import fs from 'node:fs'
 import path from 'node:path'
-import { fileURLToPath } from 'node:url'
 
 const isIterable = object => typeof object?.[Symbol.iterator] === 'function'
 
@@ -132,7 +131,7 @@ async function loadRule(ruleId) {
   }
 }
 
-const currentDirectory = path.dirname(fileURLToPath(import.meta.url))
+const currentDirectory = import.meta.dirname
 
 export async function loadRules() {
   const files = fs.readdirSync(path.join(currentDirectory, '..'), { withFileTypes: true }).filter(file => file.isFile() && !file.name.includes('.test.'))
