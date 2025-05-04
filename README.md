@@ -32,6 +32,7 @@ import { base } from 'eslint-plugin-shuunen/configs/base'
 export default [    // 🥗 compose your salad
   ...base,          // 🥚 eslint/all + unicorn/all + perfectionist/natural + jsdoc
   // ...browser,    // 🥑 globals for browser
+  // ...tailwind,   // 🥭 tailwindcss class order
   // ...node,       // 🥕 globals for node
   // ...typescript, // 🍅 typescript/all
   // ...vue,        // 🥔 vue essential + stronglyRecommended + recommended
@@ -90,12 +91,16 @@ module.exports = [
 ## Thanks
 
 - [Anthony Fu](https://github.com/antfu/eslint-config) : for his config, for the inspiration
+- [Boxy Svg](https://boxy-svg.com) : simple & effective svg editor
+- [Bun](https://bun.sh) : super fast runtime for JavaScript and TypeScript
 - [Eslint](https://eslint.org) : super tool to find & fix problems
 - [Github](https://github.com) : for all their great work year after year, pushing OSS forward
+- [Knip](https://github.com/webpro/knip) : super tool to find & fix problems
 - [Npm-parallel](https://github.com/spion/npm-parallel) : to keep my npm scripts clean & readable
 - [Repo-checker](https://github.com/Shuunen/repo-checker) : eslint cover /src code and this tool the rest ^^
 - [Shields.io](https://shields.io) : for the nice badges on top of this readme
 - [Sindre Sorhus](https://github.com/sindresorhus/eslint-plugin-unicorn) : for his awesome eslint-plugin-unicorn, for the inspiration
+- [Svg Omg](https://jakearchibald.github.io/svgomg/) : the great king of svg file size reduction
 - [Watchlist](https://github.com/lukeed/watchlist) : recursively watch a list of directories & run a command on any file system
 
 ## Stargazers over time
