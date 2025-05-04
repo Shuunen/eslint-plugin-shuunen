@@ -40,11 +40,29 @@
     "./configs/browser": {
       "import": "./configs/browser.js"
     },
+    "./configs/eslint": {
+      "import": "./configs/eslint.js"
+    },
+    "./configs/jsdoc": {
+      "import": "./configs/jsdoc.js"
+    },
     "./configs/node": {
       "import": "./configs/node.js"
     },
+    "./configs/perfectionist": {
+      "import": "./configs/perfectionist.js"
+    },
+    "./configs/shuunen": {
+      "import": "./configs/shuunen.js"
+    },
+    "./configs/tailwind": {
+      "import": "./configs/tailwind.js"
+    },
     "./configs/typescript": {
       "import": "./configs/typescript.js"
+    },
+    "./configs/unicorn": {
+      "import": "./configs/unicorn.js"
     },
     "./configs/vue": {
       "import": "./configs/vue.js"
