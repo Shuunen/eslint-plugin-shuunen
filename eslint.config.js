@@ -1,10 +1,11 @@
 // @ts-expect-error missing types
 import plugin from 'eslint-plugin-eslint-plugin'
-import shuunen from './index.js'
+import { base } from './configs/base.js'
+import { node } from './configs/node.js'
 
 export default [
-  ...shuunen.configs.base,
-  ...shuunen.configs.node,
+  ...base,
+  ...node,
   {
     rules: {
       'jsdoc/require-jsdoc': 'off',
