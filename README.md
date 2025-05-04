@@ -16,9 +16,23 @@ There not much to show, but here is a super useful eslint rule from this package
 
 ## Installation
 
+Choose your favorite package manager :
+
 ```bash
+npm install -D eslint-plugin-shuunen
 pnpm install -D eslint-plugin-shuunen
+yarn install -D eslint-plugin-shuunen
+bun install -D eslint-plugin-shuunen
 ```
+
+## Features
+
+- 🚀 **Modern ESLint Config**: Built for ESLint's new flat config system
+- 🔧 **Comprehensive Rules**: Combines best practices from multiple ESLint plugins
+- 📦 **Modular Design**: Pick and choose the configs you need
+- ⚡ **Performance Optimized**: Minimal overhead, maximum value
+- 🛠 **TypeScript Support**: Full TypeScript support with strict type checking
+- 🎨 **Styling Rules**: Consistent code style across your project
 
 ## ES Module
 
@@ -72,9 +86,15 @@ module.exports = [
 ]
 ```
 
-## Features
+## Included Plugins
 
-- [x] awesomely opinionated plugins & rules :sparkles:
+- `@eslint/js`: Core ESLint rules
+- `eslint-plugin-jsdoc`: JSDoc rules
+- `eslint-plugin-perfectionist`: Code organization, sorting
+- `eslint-plugin-tailwindcss`: Tailwind CSS class order
+- `eslint-plugin-unicorn`: Additional ESLint rules
+- `eslint-plugin-vue`: Vue.js support
+- `typescript-eslint`: TypeScript support
 
 ## TODO
 
