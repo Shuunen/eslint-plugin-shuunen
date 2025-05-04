@@ -1704,42 +1704,6 @@ exports[`index - check exported value 1`] = `
         },
         "name": "shuunen/browser",
       },
-      {
-        "languageOptions": {
-          "parserOptions": {
-            "ecmaFeatures": "...",
-          },
-        },
-        "name": "tailwindcss:base",
-        "plugins": {
-          "tailwindcss": {
-            "configs": "...",
-            "rules": "...",
-          },
-        },
-      },
-      {
-        "name": "tailwindcss:rules",
-        "rules": {
-          "tailwindcss/classnames-order": "warn",
-          "tailwindcss/enforces-negative-arbitrary-values": "warn",
-          "tailwindcss/enforces-shorthand": "warn",
-          "tailwindcss/migration-from-tailwind-2": "warn",
-          "tailwindcss/no-arbitrary-value": "off",
-          "tailwindcss/no-contradicting-classname": "error",
-          "tailwindcss/no-custom-classname": "warn",
-          "tailwindcss/no-unnecessary-arbitrary-value": "warn",
-        },
-      },
-      {
-        "name": "shuunen/browser/tailwind-settings",
-        "settings": {
-          "tailwindcss": {
-            "callees": "...",
-            "whitelist": "...",
-          },
-        },
-      },
     ],
     "node": [
       {
@@ -1822,6 +1786,44 @@ exports[`index - check exported value 1`] = `
           },
         },
         "name": "shuunen/node",
+      },
+    ],
+    "tailwind": [
+      {
+        "languageOptions": {
+          "parserOptions": {
+            "ecmaFeatures": "...",
+          },
+        },
+        "name": "tailwindcss:base",
+        "plugins": {
+          "tailwindcss": {
+            "configs": "...",
+            "rules": "...",
+          },
+        },
+      },
+      {
+        "name": "tailwindcss:rules",
+        "rules": {
+          "tailwindcss/classnames-order": "warn",
+          "tailwindcss/enforces-negative-arbitrary-values": "warn",
+          "tailwindcss/enforces-shorthand": "warn",
+          "tailwindcss/migration-from-tailwind-2": "warn",
+          "tailwindcss/no-arbitrary-value": "off",
+          "tailwindcss/no-contradicting-classname": "error",
+          "tailwindcss/no-custom-classname": "warn",
+          "tailwindcss/no-unnecessary-arbitrary-value": "warn",
+        },
+      },
+      {
+        "name": "shuunen/browser/tailwind-settings",
+        "settings": {
+          "tailwindcss": {
+            "callees": "...",
+            "whitelist": "...",
+          },
+        },
       },
     ],
     "typescript": [

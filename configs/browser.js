@@ -1,6 +1,5 @@
 import globals from 'globals'
 import { shortName } from '../src/constants.js'
-import { tailwind } from './tailwind.js'
 //     _____
 //  __|___  |__  _____   _____  __  __  __  ______  ______  _____
 // |      >    ||     | /     \|  \/  \|  ||   ___||   ___||     |
@@ -18,5 +17,4 @@ export const browser = [
     },
     name: `${shortName}/browser`,
   },
-  ...tailwind,
 ]

@@ -5,6 +5,7 @@ export type Configs = {
   base: Linter.Config[]
   node: Linter.Config[]
   browser: Linter.Config[]
+  tailwind: Linter.Config[]
   typescript: Linter.Config[]
   vue: Linter.Config[]
 }
