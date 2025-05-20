@@ -20,7 +20,7 @@
     "@types/node": "22.15",
     "eslint": "9.26",
     "eslint-plugin-eslint-plugin": "6.4",
-    "knip": "5.56",
+    "knip": "5.57",
     "npm-parallel": "2.0",
     "repo-check": "1.43",
     "typescript": "5.8",
