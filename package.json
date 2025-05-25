@@ -22,7 +22,7 @@
     "eslint-plugin-eslint-plugin": "6.4",
     "knip": "5.58",
     "npm-parallel": "2.0",
-    "repo-check": "1.43",
+    "repo-check": "1.44",
     "typescript": "5.8",
     "watchlist": "0.3"
   },
