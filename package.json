@@ -14,11 +14,11 @@
   "description": "My personal ESLint configs & rules",
   "devDependencies": {
     "@biomejs/biome": "1.9",
-    "@eslint/js": "9.27",
+    "@eslint/js": "9.28",
     "@tsconfig/strictest": "2.0",
     "@types/bun": "latest",
     "@types/node": "22.15",
-    "eslint": "9.27",
+    "eslint": "9.28",
     "eslint-plugin-eslint-plugin": "6.4",
     "knip": "5.59",
     "npm-parallel": "2.0",
