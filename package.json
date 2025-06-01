@@ -3,7 +3,7 @@
   "author": "Romain Racamier-Lafon <romain.racamier@gmail.com>",
   "bugs": "https://github.com/Shuunen/eslint-plugin-shuunen/issues",
   "dependencies": {
-    "eslint-plugin-jsdoc": "50.6",
+    "eslint-plugin-jsdoc": "50.7",
     "eslint-plugin-perfectionist": "4.13",
     "eslint-plugin-tailwindcss": "3.18",
     "eslint-plugin-unicorn": "59.0",
