@@ -8,6 +8,17 @@
 
 ![logo](docs/banner.svg)
 
+## Archived
+
+This project is archived because of the poor `Eslint` performance compared to the newest kings like [Biome](https://biomejs.dev/) and [OxLint](https://oxc.rs/docs/guide/usage/linter.html).
+
+See some metrics from my [other project](https://github.com/Shuunen/snippets/blob/master/docs/benchmarks.md) :
+
+- Eslint : 4.1s
+- Biome : 0.3s
+
+This is the time taken by each tool to check a super small codebase containing 50 files... so you can imagine how long it takes on a real project with hundreds of files.
+
 ## Demo
 
 There not much to show, but here is a super useful eslint rule from this package in action :
